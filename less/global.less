@@ -1,3 +1,13 @@
-.container {
+.outer-container {
+  max-width: 1000px;
+  margin: 0 auto;
   background-color: pink;
-}
+
+  .inner-container {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    border:5px solid white;
+    padding: 1%;
+  } // closes inner-container
+} // closes outer-container

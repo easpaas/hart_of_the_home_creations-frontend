@@ -126,11 +126,71 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-.container {
+.outer-container {
+  max-width: 1000px;
+  margin: 0 auto;
   background-color: pink;
 }
-header h1 {
-  background-color: pink;
+.outer-container .inner-container {
+  width: 80%;
+  margin: 0 auto;
+  background-color: white;
+  border: 5px solid white;
+  padding: 1%;
+}
+header {
+  position: fixed;
+  top: 0;
+  width: 70%;
+  background-color: lightpink;
   color: white;
+  display: flex;
+  justify-content: space-around;
+}
+header h1 {
+  color: white;
+  text-align: center;
+  font-size: 3rem;
+}
+header nav {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+.one div {
+  max-width: 100%;
+}
+.one div img {
+  width: 100%;
+}
+.two {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2%;
+  margin: 5% 0;
+}
+.two p {
+  font-size: 14px;
+  line-height: 3em;
+}
+.breakpoint-1 {
+  width: 90%;
+  border: 3px dashed lightgray;
+  margin: 4% auto;
+}
+footer {
+  padding: 2%;
+  text-align: center;
+  background-color: pink;
+}
+footer h2 {
   text-align: center;
 }
