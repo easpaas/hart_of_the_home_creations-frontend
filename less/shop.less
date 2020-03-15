@@ -4,33 +4,96 @@
   margin: 10% 0;
 
   .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: 0 2%;
-    text-align: center;
-    font-family: arial;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
+    border: 2px solid; 
+    padding: 4% 2%;
   
-    .price {
-      color: grey;
-      font-size: 22px;
-    } // closes price
-  
-    p {
-      button {
-        border: none;
-        outline: 0;
-        padding: 12px;
-        color: white;
-        background-color: #000;
-        text-align: center;
-        cursor: pointer;
-        width: 100%;
-        font-size: 18px;
+    .image {
+      max-width: 100%;
+      margin: 4%;
 
-        &:hover {
-          opacity: 0.7;
-        } // closes button hover
-      } /// closes button
-    } // closes paragraph
-    } // closes card
+      img {
+        width: 100%;
+      } // closes img
+    } // closes image
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    
+      .title-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+        width: 100%;
+        
+        h2 {
+          color: #ff80bf;
+          font-size: 1.5rem;
+        } // closes h2
+
+        p {
+          font-size: 1.2rem;
+        } // closes paragaraph
+      } // close title-price
+
+      a {
+        text-decoration: underline;
+        font-size: 1.2rem;
+        color: #ff80bf;
+        margin-top: 5%;
+      } // closes anchor
+    } // closes description
+    
+    .content {
+      text-align: center;
+      margin-top: 5%;
+
+      .cart {
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10%;
+        padding: 2%;
+        color: #ff80bf;
+        font-size: 1rem;
+      } // closes cart
+    } // closes content
+
+  } // closes card
 } // closes row
+  
+  // .card {
+  //   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  //   max-width: 300px;
+  //   margin: 0 2%;
+  //   text-align: center;
+  //   font-family: arial;
+  
+  //   .price {
+  //     color: grey;
+  //     font-size: 22px;
+  //   } // closes price
+  
+  //   p {
+  //     button {
+  //       border: none;
+  //       outline: 0;
+  //       padding: 12px;
+  //       color: white;
+  //       background-color: #000;
+  //       text-align: center;
+  //       cursor: pointer;
+  //       width: 100%;
+  //       font-size: 18px;
+
+  //       &:hover {
+  //         opacity: 0.7;
+  //       } // closes button hover
+  //     } /// closes button
+  //   } // closes paragraph
+  //   } // closes card

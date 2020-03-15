@@ -139,9 +139,6 @@ table {
   padding: 1%;
 }
 header {
-  position: fixed;
-  top: 0;
-  width: 70%;
   background-color: lightpink;
   color: white;
   display: flex;
@@ -187,29 +184,56 @@ header nav a {
   margin: 10% 0;
 }
 .row .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
-  margin: 0 2%;
-  text-align: center;
-  font-family: arial;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 25%;
+  border: 2px solid;
+  padding: 4% 2%;
 }
-.row .card .price {
-  color: grey;
-  font-size: 22px;
+.row .card .image {
+  max-width: 100%;
+  margin: 4%;
 }
-.row .card p button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
+.row .card .image img {
   width: 100%;
-  font-size: 18px;
 }
-.row .card p button:hover {
-  opacity: 0.7;
+.row .card .description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.row .card .description .title-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.row .card .description .title-price h2 {
+  color: #ff80bf;
+  font-size: 1.5rem;
+}
+.row .card .description .title-price p {
+  font-size: 1.2rem;
+}
+.row .card .description a {
+  text-decoration: underline;
+  font-size: 1.2rem;
+  color: #ff80bf;
+  margin-top: 5%;
+}
+.row .card .content {
+  text-align: center;
+  margin-top: 5%;
+}
+.row .card .content .cart {
+  text-decoration: none;
+  border: 2px solid black;
+  border-radius: 10%;
+  padding: 2%;
+  color: #ff80bf;
+  font-size: 1rem;
 }
 .breakpoint-1 {
   width: 90%;
