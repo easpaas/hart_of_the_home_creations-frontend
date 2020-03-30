@@ -20,7 +20,6 @@ const StyledLink = styled.a`
   color: grey;
   border: 1px solid grey;
   padding: 1%;
-  &hover: color: white;
 `;
 
 
@@ -31,6 +30,8 @@ const Header = () => {
       <Nav>
         <StyledLink href="#">Home</StyledLink>
         <StyledLink href="#">Shop</StyledLink>
+        <StyledLink href="#">About</StyledLink>
+        <StyledLink href="#">Contact</StyledLink>
       </Nav>
     </HeaderStyles>
   )
