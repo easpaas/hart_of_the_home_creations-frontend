@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import product from '../assests/logo192.png';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faImage } from '@fortawesome/free-solid-svg-icons'
+
 
 const Card = styled.div`
   width: 27%;
@@ -20,7 +23,7 @@ function ProductCard() {
     <Card>
       <h3>Product Title</h3>
       <Image>
-        <img src={product} alt="react logo" style={{width: '100%'}}/>
+        <FontAwesomeIcon icon={faImage} size="7x" />
       </Image>
     </Card>
   );
