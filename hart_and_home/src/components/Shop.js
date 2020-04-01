@@ -18,6 +18,15 @@ const ProductRow = styled.div`
   border: 1px solid gray;
 `;
 
+const TopPagination = styled.div`
+  width: 20%;
+  margin-left: 73%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  padding: 1% 0;
+`;
+
 // TODO axios call for products, if pulling from database
 
 
@@ -31,7 +40,20 @@ function Shop() {
     <div className="Shop">
       <h1>Shop</h1>
       <DeckContainer>
-        {/* TODO pagination top right with 6/12/24 options for cards per page */}
+
+        <TopPagination>
+          
+          {/* TODO display number of product cards according to each link */}
+
+          <p style={{color: 'lightpink', margin: '0'}}>results per page</p>
+          <div style={{width: '100%', display: 'flex', justifyContent: 'space-evenly'}}>
+            <a href="#" style={{textDecoration: 'none', color: 'lightpink'}}>9</a>
+            <p style={{color:'lightpink', margin: '0'}}>/</p>
+            <a href="#" style={{textDecoration: 'none', color: 'lightpink'}}>12</a>
+            <p style={{color:'lightpink', margin: '0'}}>/</p>
+            <a href="#" style={{textDecoration: 'none', color: 'lightpink'}}>18</a>
+          </div>
+        </TopPagination>
 
         {/* TODO rows of 3 */}
         <ProductRow>

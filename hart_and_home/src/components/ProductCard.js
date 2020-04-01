@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import product from '../assests/logo192.png';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faImage } from '@fortawesome/free-solid-svg-icons'
