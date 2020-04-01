@@ -1,17 +1,20 @@
 import React from 'react';
+import {Route} from 'react-router-dom';
 import './App.css';
 
-import Header from './components/Header';
 import Home from './components/Home';
-import Footer from './components/Footer';
+import Shop from './components/Shop';
+import About from './components/About';
+import Contact from './components/Contact';
 
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Home />
-      <Footer />
+      <Route exact path='/' component={Home} />
+      <Route path='/shop' component={Shop} />
+      <Route path='/about' component={About} />
+      <Route path='/contact' component={Contact} />
     </div>
   );
 }

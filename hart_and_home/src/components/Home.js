@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import Header from './Header';
+import Footer from './Footer';
 
 const ImageContainer = styled.div`
   width: 60%;
@@ -13,12 +15,16 @@ const ImageContainer = styled.div`
 
 function Home() {
   return (
+    <>
+    <Header />
     <div className='Home'>
       <h1>Home</h1>
       <ImageContainer>
         <p>Image will be placed here</p>
       </ImageContainer>
     </div>
+    <Footer />
+    </>
   );
 }
 

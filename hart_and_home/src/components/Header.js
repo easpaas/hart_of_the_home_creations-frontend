@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import {Link} from 'react-router-dom';
+
 
 const HeaderStyles = styled.h1`
   background-color: black;
@@ -18,20 +20,25 @@ const Nav = styled.nav`
 const StyledLink = styled.a`
   text-decoration: none;
   color: grey;
+  font-family: 'Gotu', sans-serif;
   border: 1px solid grey;
   padding: 1%;
 `;
 
+const Title = styled.h1`
+  font-size: 6rem;
+  font-family: 'Gotu', sans-serif;
+`;
 
 const Header = () => {
   return ( 
     <HeaderStyles >
-      <h1>Hart & Home</h1>
+      <Title>Hart & Home</Title>
       <Nav>
-        <StyledLink href="#">Home</StyledLink>
-        <StyledLink href="#">Shop</StyledLink>
-        <StyledLink href="#">About</StyledLink>
-        <StyledLink href="#">Contact</StyledLink>
+        <StyledLink><Link to="/" style={{textDecoration: "none", color: "grey"}}>Home</Link></StyledLink>
+        <StyledLink><Link to="/shop" style={{textDecoration: "none", color: "grey"}}>Shop</Link></StyledLink>
+        <StyledLink><Link to="/about" style={{textDecoration: "none", color: "grey"}}>About</Link></StyledLink>
+        <StyledLink><Link to="/contact" style={{textDecoration: "none", color: "grey"}}>Contact</Link></StyledLink>
       </Nav>
     </HeaderStyles>
   )
