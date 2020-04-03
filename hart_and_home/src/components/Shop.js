@@ -41,7 +41,6 @@ function Shop() {
       <DeckContainer>
 
         <TopPagination>
-          
           {/* TODO display number of product cards according to each link */}
 
           <p style={{color: 'lightpink', margin: '0'}}>results per page</p>

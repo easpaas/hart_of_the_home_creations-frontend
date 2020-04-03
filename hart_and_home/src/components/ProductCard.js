@@ -11,14 +11,15 @@ const Card = styled.div`
   border: 1px solid gray;
   color: gray;
   text-align: center;
-  &:hover{
-    filter: blur(2px);
+  &:hover {
+    filter: blur(1px);
   }
 `;
 
 const Image = styled.div`
   max-width: 100%;
 `;
+
 
 function ProductCard() {
   return (

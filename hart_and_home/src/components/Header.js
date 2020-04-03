@@ -18,12 +18,16 @@ const Nav = styled.nav`
     font-size: 1rem;
 `;
 
-const StyledLink = styled.a`
+const StyledLink = styled(Link)`
   text-decoration: none;
   color: grey;
   font-family: 'Gotu', sans-serif;
   border: 1px solid grey;
   padding: 1%;
+  &:hover {
+    color: lightpink;
+    border: 1px dashed grey;
+  }
 `;
 
 const Title = styled.h1`
@@ -36,9 +40,9 @@ const Header = () => {
     <HeaderStyles >
       <Title>Hart Of The Home Creations</Title>
       <Nav>
-        <StyledLink><Link to="/" style={{textDecoration: "none", color: "grey"}}>Home</Link></StyledLink>
-        <StyledLink><Link to="/shop" style={{textDecoration: "none", color: "grey"}}>Shop</Link></StyledLink>
-        <StyledLink><Link to="/contact" style={{textDecoration: "none", color: "grey"}}>Contact</Link></StyledLink>
+        <StyledLink to="/" style={{textDecoration: "none"}}>Home</StyledLink>
+        <StyledLink to="/shop" style={{textDecoration: "none"}}>Shop</StyledLink>
+        <StyledLink to="/contact" style={{textDecoration: "none"}}>Contact</StyledLink>
       </Nav>
     </HeaderStyles>
   )
