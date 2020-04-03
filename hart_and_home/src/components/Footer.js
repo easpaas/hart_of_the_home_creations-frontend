@@ -4,19 +4,20 @@ import Styled from 'styled-components';
 
 const FooterStyles = Styled.div`
   background-color: black;
+  margin: 0;
 `;
 
-
-const Title = Styled.p`
-  font-size: 1.2rem;
+const Title = Styled.h4`
   color: lightpink;
   padding: 1%;
+  font-family: 'Gotu', sans-serif;
+  margin: 0;
 `;
 
 function Footer() {
   return (
     <FooterStyles>
-      <Title>&copy; Hart & Home 2020</Title>
+      <Title>&copy;2020 Hart Of The Home Creations</Title>
     </FooterStyles>
   )
 }

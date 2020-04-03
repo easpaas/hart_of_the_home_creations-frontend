@@ -11,6 +11,9 @@ const Card = styled.div`
   border: 1px solid gray;
   color: gray;
   text-align: center;
+  &:hover{
+    filter: blur(2px);
+  }
 `;
 
 const Image = styled.div`

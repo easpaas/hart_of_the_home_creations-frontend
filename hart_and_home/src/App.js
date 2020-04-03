@@ -4,7 +4,6 @@ import './App.css';
 
 import Home from './components/Home';
 import Shop from './components/Shop';
-import About from './components/About';
 import Contact from './components/Contact';
 
 
@@ -13,7 +12,6 @@ function App() {
     <div className="App">
       <Route exact path='/' component={Home} />
       <Route path='/shop' component={Shop} />
-      <Route path='/about' component={About} />
       <Route path='/contact' component={Contact} />
     </div>
   );

@@ -15,7 +15,6 @@ const ProductRow = styled.div`
   display: flex;
   justify-content: space-around;
   width: 100%;
-  border: 1px solid gray;
 `;
 
 const TopPagination = styled.div`

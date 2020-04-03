@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faImage } from '@fortawesome/free-solid-svg-icons'
+
 import Header from './Header';
 import Footer from './Footer';
 
@@ -10,7 +13,9 @@ const ImageContainer = styled.div`
   background-color: black;
   border: 1px solid grey;
   color: grey;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   `;
 
 function Home() {
@@ -18,9 +23,9 @@ function Home() {
     <>
     <Header />
     <div className='Home'>
-      <h1>Home</h1>
+      <h1 style={{fontFamily: 'Gotu, san-serif'}}>Welcome</h1>
       <ImageContainer>
-        <p>Image will be placed here</p>
+        <FontAwesomeIcon icon={faImage} size="7x" />
       </ImageContainer>
     </div>
     <Footer />

@@ -8,6 +8,7 @@ const HeaderStyles = styled.h1`
   color: lightpink;
   text-align: center;
   padding: 2%;
+  margin: 0;
 `;
 
 const Nav = styled.nav`
@@ -26,18 +27,17 @@ const StyledLink = styled.a`
 `;
 
 const Title = styled.h1`
-  font-size: 6rem;
+  font-size: 4.5rem;
   font-family: 'Gotu', sans-serif;
 `;
 
 const Header = () => {
   return ( 
     <HeaderStyles >
-      <Title>Hart & Home</Title>
+      <Title>Hart Of The Home Creations</Title>
       <Nav>
         <StyledLink><Link to="/" style={{textDecoration: "none", color: "grey"}}>Home</Link></StyledLink>
         <StyledLink><Link to="/shop" style={{textDecoration: "none", color: "grey"}}>Shop</Link></StyledLink>
-        <StyledLink><Link to="/about" style={{textDecoration: "none", color: "grey"}}>About</Link></StyledLink>
         <StyledLink><Link to="/contact" style={{textDecoration: "none", color: "grey"}}>Contact</Link></StyledLink>
       </Nav>
     </HeaderStyles>
