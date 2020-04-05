@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+import SocialMedia from './SocialMedia';
 
 
 const HeaderStyles = styled.h1`
@@ -44,6 +45,7 @@ const Header = () => {
         <StyledLink to="/shop" style={{textDecoration: "none"}}>Shop</StyledLink>
         <StyledLink to="/contact" style={{textDecoration: "none"}}>Contact</StyledLink>
       </Nav>
+      <SocialMedia />
     </HeaderStyles>
   )
 }

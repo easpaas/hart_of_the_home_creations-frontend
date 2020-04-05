@@ -43,12 +43,12 @@ function Shop() {
         <TopPagination>
           {/* TODO display number of product cards according to each link */}
 
-          <p style={{color: 'lightpink', margin: '0'}}>results per page</p>
+          <p style={{color: 'lightpink', margin: '0'}}>VIEW: </p>
           <div style={{width: '100%', display: 'flex', justifyContent: 'space-evenly'}}>
             <a href="#" style={{textDecoration: 'none', color: 'lightpink'}}>9</a>
-            <p style={{color:'lightpink', margin: '0'}}>/</p>
+            <p style={{color:'lightpink', margin: '0'}}>|</p>
             <a href="#" style={{textDecoration: 'none', color: 'lightpink'}}>12</a>
-            <p style={{color:'lightpink', margin: '0'}}>/</p>
+            <p style={{color:'lightpink', margin: '0'}}>|</p>
             <a href="#" style={{textDecoration: 'none', color: 'lightpink'}}>18</a>
           </div>
         </TopPagination>

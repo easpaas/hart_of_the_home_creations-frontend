@@ -1,4 +1,4 @@
-## Hart & Home 
+## Hart Of The Home Creations 
 #### E-commerce website
 
 
