@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
-import SocialMedia from './SocialMedia';
 
 
 const HeaderStyles = styled.h1`
@@ -14,16 +13,15 @@ const HeaderStyles = styled.h1`
 
 const Nav = styled.nav`
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    justify-content: center;
     font-size: 1rem;
 `;
 
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: grey;
-  font-family: 'Gotu', sans-serif;
-  border: 1px solid grey;
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif;
   padding: 1%;
   &:hover {
     color: lightpink;
@@ -41,11 +39,11 @@ const Header = () => {
     <HeaderStyles >
       <Title>Hart Of The Home Creations</Title>
       <Nav>
-        <StyledLink to="/" style={{textDecoration: "none"}}>Home</StyledLink>
-        <StyledLink to="/shop" style={{textDecoration: "none"}}>Shop</StyledLink>
-        <StyledLink to="/contact" style={{textDecoration: "none"}}>Contact</StyledLink>
+        <StyledLink to="/" style={{textDecoration: "none"}}>HOME</StyledLink>
+        <StyledLink to="/shop" style={{textDecoration: "none"}}>SHOP</StyledLink>
+        <StyledLink to="/creations" style={{textDecoration: "none"}}>CREATIONS</StyledLink>
+        <StyledLink to="/contact" style={{textDecoration: "none"}}>CONTACT</StyledLink>
       </Nav>
-      <SocialMedia />
     </HeaderStyles>
   )
 }

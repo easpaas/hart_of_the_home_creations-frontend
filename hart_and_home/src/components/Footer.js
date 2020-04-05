@@ -1,6 +1,5 @@
 import React from 'react';
 import Styled from 'styled-components';
-import SocialMedia from './SocialMedia';
 
 
 const FooterStyles = Styled.div`
@@ -21,7 +20,6 @@ function Footer() {
   return (
     <FooterStyles>
       <Title>&copy;2020 Hart Of The Home Creations</Title>
-      <SocialMedia />
     </FooterStyles>
   )
 }

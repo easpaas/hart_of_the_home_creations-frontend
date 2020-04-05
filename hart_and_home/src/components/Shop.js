@@ -37,9 +37,7 @@ function Shop() {
     <>
     <Header />
     <div className="Shop">
-      <h1>Shop</h1>
       <DeckContainer>
-
         <TopPagination>
           {/* TODO display number of product cards according to each link */}
 

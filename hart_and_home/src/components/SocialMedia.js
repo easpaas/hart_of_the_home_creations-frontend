@@ -9,30 +9,36 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const SocialBar = styled.div`
-  width: 10%;
   display: flex;
   justify-content: space-between;
+  width: 25%;
+  margin: 0 auto;
   padding: 1%;
 `;
+
+const StyledLink = styled('a')`
+  color: lightpink;
+`;
+
 
 function SocialMedia() {
   return (
     <SocialBar>
-      <a
-        href="https://www.facebook.com"
+      <StyledLink
+        href="https://www.facebook.com/chalkcouturewithvickihunter/"
       >
         <FontAwesomeIcon icon={faFacebook} size="2x" />
-      </a>
-      <a
-        href="https://www.instagram.com"
+      </StyledLink>
+      <StyledLink
+        href="https://www.instagram.com/iamvickihunter"
       >
         <FontAwesomeIcon icon={faInstagram} size="2x" />
-      </a>
-      <a
-        href="https://www.pinterest.com"
+      </StyledLink>
+      <StyledLink
+        href="https://www.pinterest.com/vickisscrapper"
       >
         <FontAwesomeIcon icon={faPinterest} size="2x" />
-      </a>
+      </StyledLink>
     </SocialBar>
   );
 }

@@ -23,7 +23,7 @@ function Home() {
     <>
     <Header />
     <div className='Home'>
-      <h1 style={{fontFamily: 'Gotu, san-serif'}}>Welcome</h1>
+      <h1 style={{fontFamily: 'Playfair Display, san-serif'}}>Welcome</h1>
       <ImageContainer>
         <FontAwesomeIcon icon={faImage} size="7x" />
       </ImageContainer>
