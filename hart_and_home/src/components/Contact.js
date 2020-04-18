@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Header from './Header';
@@ -6,7 +6,7 @@ import Footer from './Footer';
 import SocialMedia from './SocialMedia';
 
 
-const Form = styled.div`
+const ContactBar = styled.div`
   background-color: black;
   color: grey;
   width: 60%;
@@ -14,17 +14,13 @@ const Form = styled.div`
   padding: 2%;
 `;
 
-const FormTitle = styled.h2`
-  font-family: 'Gotu', sans-serif;
-`;
-
 function Contact() {
   return (
     <>
       <Header />
-      <Form>
+      <ContactBar>
         <SocialMedia />
-      </Form>
+      </ContactBar>
       <Footer />
     </>
   );

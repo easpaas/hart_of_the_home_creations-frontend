@@ -18,13 +18,17 @@ const ProductRow = styled.div`
 `;
 
 const TopPagination = styled.div`
-  width: 20%;
-  margin-left: 73%;
-  height: 5vh;
   display: flex;
-  align-items: center;
-  padding: 1% 0;
+  justify-content: space-evenly;
+  margin-left: 73%;
+  width: 20%;
+  color: lightpink;
 `;
+
+const PaginationContainer = styled.div`
+  padding-top: 4%;
+`;
+
 
 // TODO axios call for products, if pulling from database
 
@@ -38,18 +42,17 @@ function Shop() {
     <Header />
     <div className="Shop">
       <DeckContainer>
-        <TopPagination>
+        <PaginationContainer>
           {/* TODO display number of product cards according to each link */}
-
-          <p style={{color: 'lightpink', margin: '0'}}>VIEW: </p>
-          <div style={{width: '100%', display: 'flex', justifyContent: 'space-evenly'}}>
-            <a href="#" style={{textDecoration: 'none', color: 'lightpink'}}>9</a>
-            <p style={{color:'lightpink', margin: '0'}}>|</p>
-            <a href="#" style={{textDecoration: 'none', color: 'lightpink'}}>12</a>
-            <p style={{color:'lightpink', margin: '0'}}>|</p>
-            <a href="#" style={{textDecoration: 'none', color: 'lightpink'}}>18</a>
-          </div>
+          <TopPagination>
+            <p>Products Per Page:</p>
+            <p onClick={(e) => console.log(e.target)}>9</p>
+            <p>|</p>
+            <p onClick={(e) => console.log(e.target)}>12</p>
+            <p>|</p>
+            <p onClick={(e) => console.log(e.target)}>18</p>
         </TopPagination>
+        </PaginationContainer>
 
         {/* TODO rows of 3 */}
         <ProductRow>

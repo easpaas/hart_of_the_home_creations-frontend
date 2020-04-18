@@ -7,8 +7,7 @@ function Creations() {
     <>
     <Header />
     <div>
-      <h1>Creations</h1>
-      
+      <h1 style={{fontFamily: 'Playfair Display, serif'}}>Creations</h1>
     </div>
     <Footer />
     </>
