@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Shop from './components/Shop';
 import Contact from './components/Contact';
 import Creations from './components/Creations';
+import ShoppingCart from './components/ShoppingCart';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route path='/shop' component={Shop} />
       <Route path='/creations' component={Creations} />
       <Route path='/contact' component={Contact} />
+      <Route exact path="/cart" component={ShoppingCart} />
     </div>
   );
 }

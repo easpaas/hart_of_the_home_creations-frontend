@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
+import {RiShoppingBagLine} from 'react-icons/ri';
 
 
 const HeaderStyles = styled.h1`
@@ -34,6 +35,19 @@ const Title = styled.h1`
   font-family: 'Gotu', sans-serif;
 `;
 
+const Cart = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 5%;
+`;
+
+const CartLink = styled.div`
+  width: 10px;
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
 const Header = () => {
   return ( 
     <HeaderStyles >
@@ -44,6 +58,14 @@ const Header = () => {
         <StyledLink to="/creations" style={{textDecoration: "none"}}>CREATIONS</StyledLink>
         <StyledLink to="/contact" style={{textDecoration: "none"}}>CONTACT</StyledLink>
       </Nav>
+      <Cart>
+        <Link to="/cart" style={{textDecoration: "none", color: "lightpink"}}>
+          <CartLink>
+          
+          <RiShoppingBagLine />
+        </CartLink>
+        </Link>
+      </Cart>
     </HeaderStyles>
   )
 }
