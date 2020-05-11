@@ -36,9 +36,9 @@ function ProductCard() {
       <Image>
         <FontAwesomeIcon icon={faImage} size="7x" />
       </Image>
-      <Add>
+      {/* <Add>
         <BsPlusCircle size="2rem" />
-      </Add>
+      </Add> */}
     </Card>
   );
 }
