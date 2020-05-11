@@ -7,9 +7,9 @@ import Header from './Header';
 import Footer from './Footer';
 
 const ImageContainer = styled.div`
-  width: 60%;
-  height: 50vh;
-  margin: 5% auto;
+  width: 45%;
+  margin: 0 auto;
+  padding: 5%;
   background-color: black;
   border: 1px solid grey;
   color: grey;
@@ -18,12 +18,13 @@ const ImageContainer = styled.div`
   justify-content: center;
   `;
 
+
 function Home() {
   return (
     <>
     <Header />
-    <div className='Home'>
-      <h1 style={{fontFamily: 'Playfair Display, san-serif'}}>Welcome</h1>
+    <div style={{backgroundColor: 'lightpink', padding: '4%'}} className='Home'>
+      <h1 style={{margin: '0', marginBottom: '4%', fontFamily: 'Playfair Display, san-serif'}}>Welcome</h1>
       <ImageContainer>
         <FontAwesomeIcon icon={faImage} size="7x" />
       </ImageContainer>
