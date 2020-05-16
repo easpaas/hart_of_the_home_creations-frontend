@@ -10,9 +10,7 @@ import {
 
 const SocialBar = styled.div`
   display: flex;
-
   justify-content: space-between;
-  width: 25%;
   margin: 0 auto;
   padding: 1%;
 `;
@@ -24,10 +22,6 @@ const StyledLink = styled('a')`
 
 function SocialMedia() {
   return (
-    <>
-    <div style={{ maxWidth: '45%' }}>
-      <img style={{ width: '100%' }} src="./assets/" alt="vicki" />
-    </div>
     <SocialBar>
       <StyledLink
         href="https://www.facebook.com/chalkcouturewithvickihunter/"
@@ -45,7 +39,6 @@ function SocialMedia() {
         <FontAwesomeIcon icon={faPinterest} size="2x" />
       </StyledLink>
     </SocialBar>
-    </>
   );
 }
 

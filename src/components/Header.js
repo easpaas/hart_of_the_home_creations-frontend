@@ -31,8 +31,9 @@ const StyledLink = styled(Link)`
 `;
 
 const Title = styled.h1`
-  font-size: 4.5rem;
+  font-size: 3rem;
   font-family: 'Gotu', sans-serif;
+  margin: 0%;
 `;
 
 const Cart = styled.div`
