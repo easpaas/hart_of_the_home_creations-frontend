@@ -10,7 +10,7 @@ const ContactBar = styled.div`
   background-color: black;
   color: grey;
   width: 60%;
-  margin: 5% auto;
+  margin: 0% auto;
   padding: 2%;
 `;
 
@@ -18,7 +18,7 @@ function Contact() {
   return (
     <>
       <Header />
-      <div style={{backgroundColor: 'lightpink'}} className="Contact-styles">
+      <div style={{backgroundColor: 'lightpink', padding: '5%' }} className="Contact-styles">
       <ContactBar>
         <SocialMedia />
       </ContactBar>
