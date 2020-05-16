@@ -8,7 +8,6 @@ import Contact from './components/Contact';
 import Creations from './components/Creations';
 import ShoppingCart from './components/ShoppingCart';
 
-
 function App() {
   return (
     <div className="App">

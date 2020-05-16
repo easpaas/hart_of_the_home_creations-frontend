@@ -8,7 +8,7 @@ import ProductCard from './ProductCard';
 const DeckContainer = styled.div`
   background-color: black;
   max-width: 80%;
-  margin: 5% auto;
+  margin: 0 auto;
 `;
 
 const ProductRow = styled.div`
@@ -40,7 +40,7 @@ function Shop() {
   return (
     <>
     <Header />
-    <div className="Shop">
+    <div style={{backgroundColor: 'lightpink', padding: '5%' }} className="Shop">
       <DeckContainer>
         <PaginationContainer>
           {/* TODO display number of product cards according to each link */}
@@ -52,7 +52,7 @@ function Shop() {
             <p>|</p>
             <p onClick={(e) => console.log(e.target)}>18</p>
         </TopPagination>
-        </PaginationContainer>
+        </PaginationContainer> 
 
         {/* TODO rows of 3 */}
         <ProductRow>

@@ -18,9 +18,12 @@ function Contact() {
   return (
     <>
       <Header />
+      <div style={{backgroundColor: 'lightpink'}} className="Contact-styles">
       <ContactBar>
         <SocialMedia />
       </ContactBar>
+      </div>
+      
       <Footer />
     </>
   );
