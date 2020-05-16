@@ -15,7 +15,7 @@ const ContactBar = styled.div`
   padding: 2%;
 `;
 
-function Contact() {
+function About() {
   return (
     <>
       <Header />
@@ -38,4 +38,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default About;

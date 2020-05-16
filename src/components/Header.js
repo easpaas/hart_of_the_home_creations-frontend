@@ -57,7 +57,7 @@ const Header = () => {
         <StyledLink to="/" style={{textDecoration: "none"}}>HOME</StyledLink>
         <StyledLink to="/shop" style={{textDecoration: "none"}}>SHOP</StyledLink>
         <StyledLink to="/creations" style={{textDecoration: "none"}}>CREATIONS</StyledLink>
-        <StyledLink to="/contact" style={{textDecoration: "none"}}>CONTACT</StyledLink>
+        <StyledLink to="/about" style={{textDecoration: "none"}}>ABOUT</StyledLink>
       </Nav>
       <Cart>
         <Link to="/cart" style={{textDecoration: "none", color: "lightpink"}}>
