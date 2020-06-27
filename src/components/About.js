@@ -24,8 +24,9 @@ function About() {
           <img src={contact} alt="vicki_hunter" style={{ width: "100%" }} />
           <div style={{ backgroundColor: 'lightpink', border: '2px solid', padding: '2%', color: 'black', marginTop: '2%' }}>
               <h2 style={{ fontVariant: 'small-caps' }}>Vicki Hunter</h2>
-              <p>Something people should know about you...</p>
-              <p>Just putting text content here to fill space</p>
+              <p>
+I love to craft and to create unique Home Decor. I have loved crafting for as long as I can remember! I'm loving chalking, making cards and paper crafting!</p>
+            
           </div>
         </div>
         <ContactBar>

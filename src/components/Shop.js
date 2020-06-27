@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import axios from 'axios';
 import styled from 'styled-components';
 
 import Header from './Header';
@@ -36,17 +37,17 @@ const PaginationContainer = styled.div`
 function Shop() {
   const [products, setProducts] = useState([]);
 
-  // useEffect(() => {
-  //   axios.get("http://localhost:8080/api/products")
-  //     .then(products => {
-  //       console.log(products);
-  //       // TODO setProducts(products)
-  //     })
-  //     .catch(error => {
-  //       console.log(error);
-  //       // TODO assign error appropriately
-  //     });
-  // }, []);
+  useEffect(() => {
+    axios.get("http://localhost:8080/api/products")
+      .then(products => {
+        console.log(products);
+        // TODO setProducts(products)
+      })
+      .catch(error => {
+        console.log(error);
+        // TODO assign error appropriately
+      });
+  }, []);
 
   return (
     <>
