@@ -43,11 +43,11 @@ const ShoppingCart = () => {
       <div className="shopping-cart">
         <p style={{color: 'red', fontSize: '1.5rem', border: '4px dashed red', padding: '2%'}}>Dummy items placed in cart to simulate items in the shopping cart.</p>
         {/* 
-                        TODO 
-            *************************************
-            Map function that renders a <Product /> 
-            depending on number of items in cart.
-            ***************************************
+          TODO 
+          *************************************
+          Map function that renders a <Product /> 
+          depending on number of items in cart.
+          ***************************************
         */}
         <Product>
           <ProductCard />
