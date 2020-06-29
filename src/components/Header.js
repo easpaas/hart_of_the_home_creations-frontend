@@ -49,8 +49,21 @@ const CartLink = styled.div`
   }
 `;
 
+const SignIn = styled.p`
+  background-color: black;
+  text-align: left;
+  color: grey;
+  padding-top: 1%;
+  margin: 0;
+`;
+
+
 const Header = () => {
   return ( 
+    <>
+    <SignIn onClick={() => {console.log('login modal will pop open here')}}>
+      LOGIN
+    </SignIn>
     <HeaderStyles >
       <Title>Hart Of The Home Creations</Title>
       <Nav>
@@ -62,12 +75,12 @@ const Header = () => {
       <Cart>
         <Link to="/cart" style={{textDecoration: "none", color: "lightpink"}}>
           <CartLink>
-          
-          <RiShoppingBagLine />
-        </CartLink>
+            <RiShoppingBagLine />
+          </CartLink>
         </Link>
       </Cart>
     </HeaderStyles>
+    </>
   )
 }
 

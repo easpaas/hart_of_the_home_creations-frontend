@@ -22,7 +22,7 @@ function Home() {
   return (
     <>
     <Header />
-    <div style={{backgroundColor: 'lightpink', padding: '4% 0' }} className='Home'>
+    <div style={{backgroundColor: 'lightpink', padding: '4% 0' }}>
       <h1 style={{marginBottom: '2%', fontFamily: 'Playfair Display, san-serif'}}>Welcome</h1>
       <ImageContainer>
         <img src={home} alt="home" style={{ width: '100%'}} />
