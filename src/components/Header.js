@@ -62,15 +62,14 @@ const Header = () => {
   return ( 
     <>
     <SignIn onClick={() => {console.log('login modal will pop open here')}}>
-      LOGIN
+      Login
     </SignIn>
     <HeaderStyles >
       <Title>Hart Of The Home Creations</Title>
       <Nav>
-        <StyledLink to="/" style={{textDecoration: "none"}}>HOME</StyledLink>
-        <StyledLink to="/shop" style={{textDecoration: "none"}}>SHOP</StyledLink>
-        <StyledLink to="/creations" style={{textDecoration: "none"}}>CREATIONS</StyledLink>
-        <StyledLink to="/about" style={{textDecoration: "none"}}>ABOUT</StyledLink>
+        <StyledLink to="/" style={{textDecoration: "none"}}>Home</StyledLink>
+        <StyledLink to="/shop" style={{textDecoration: "none"}}>Shop</StyledLink>
+        <StyledLink to="/about" style={{textDecoration: "none"}}>About</StyledLink>
       </Nav>
       <Cart>
         <Link to="/cart" style={{textDecoration: "none", color: "lightpink"}}>
