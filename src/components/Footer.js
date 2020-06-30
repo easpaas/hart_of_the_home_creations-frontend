@@ -18,13 +18,18 @@ const Title = Styled.h4`
   margin: 0;
 `;
 
+const ContactBar = Styled.div`
+  width: 10%;
+  margin: 0 auto;
+`;
+
 function Footer() {
   return (
     <FooterStyles>
       <Title>&copy;2020 Hart Of The Home Creations</Title>
-      <div style={{width: "10%", margin: "0 auto"}}>
+      <ContactBar>
         <SocialMedia />
-      </div>
+      </ContactBar>
     </FooterStyles>
   )
 }
