@@ -1,40 +1,48 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
 
+import {auth} from '../utils/auth.js';
 import Header from './Header';
 import Footer from './Footer';
-import Blog from './Blog';
+import Blog from './BlogPreview';
 
 const BlogContainer = styled.div`
   max-width: 100%;
   background-color: lightpink;
   padding: 4% 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 800px;
 `;
 
-const initBlogState = [
-  {
-    id: 3, 
-    title: "My Third Blog post", 
-    post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    postDate: "2020-06-29"
-  },
-  {
-    id: 1, 
-    title: "My First Blog post", 
-    post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    postDate: "2020-06-27"
-  },
-  {
-    id: 2, 
-    title: "My Second Blog post", 
-    post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-    postDate: "2020-06-28"
-  }
-]
-
-
 function Home() {
-  const [blog, setBlog] = useState(initBlogState);
+  const [blog, setBlog] = useState([]);
+
+
+  useEffect(() => {
+    const token = JSON.parse(localStorage.getItem('token'));
+      
+    auth()
+    .get('http://localhost:8080/api/blogs', {
+      headers: {
+        Authorization: token
+      }
+    })
+    .then(response => {
+      setBlog(response.data);
+    })
+    .catch(error => {
+      console.log(error)
+    })
+  }, []);
+  
+  // This functions purpose serves to provide a route to Blog
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   // TODO - 
+  //   console.log("inside handleclick");
+  // }
 
   return (
     <>
@@ -44,8 +52,9 @@ function Home() {
         blog.map((entry) => {
           return(
             <Blog 
-              title={entry.title} 
-              post={entry.post}
+              key={entry.id}
+              title={entry.heading} 
+              post={entry.content}
               postDate={entry.postDate}
             />
           )
