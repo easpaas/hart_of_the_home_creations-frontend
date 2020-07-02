@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import axios from 'axios';
 import styled from 'styled-components';
 
+import {auth} from'../utils/auth';
 import Header from './Header';
 import Footer from './Footer';
 import ProductCard from './ProductCard';
@@ -38,10 +38,10 @@ function Shop() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:8080/api/products")
-      .then(products => {
-        console.log(products);
-        // TODO setProducts(products)
+    auth()
+      .get("http://localhost:8080/api/products")
+      .then(response => {
+        setProducts(response.data);
       })
       .catch(error => {
         console.log(error);
@@ -52,43 +52,19 @@ function Shop() {
   return (
     <>
     <Header />
-    <div style={{backgroundColor: 'lightpink', padding: '5%' }} className="Shop">
-      <DeckContainer>
-        <PaginationContainer>
-          {/* TODO display number of product cards according to each link */}
-          <TopPagination>
-            <p>Products Per Page:</p>
-            <p onClick={(e) => console.log(e.target)}>9</p>
-            <p>|</p>
-            <p onClick={(e) => console.log(e.target)}>12</p>
-            <p>|</p>
-            <p onClick={(e) => console.log(e.target)}>18</p>
-        </TopPagination>
-        </PaginationContainer> 
-
-        {/* TODO rows of 3 */}
-        <ProductRow>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </ProductRow>
-
-        <ProductRow>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </ProductRow>
-
-
-        <ProductRow>
-          <ProductCard />
-          <ProductCard />
-          <ProductCard />
-        </ProductRow>
-        
-        {/* TODO pagination bottom middle with page numbers based on number of products */}
-
-      </DeckContainer>
+    <div style={{backgroundColor: 'lightpink', padding: '5%' }}>
+      {
+        products.map(item => {
+          return (
+            <ProductCard
+              key={item.id}
+              name={item.name}
+              description={item.descrition}
+              price={item.price}
+            />
+          );
+        })
+      }
     </div>
     <Footer />
     </>

@@ -1,15 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faImage } from '@fortawesome/free-solid-svg-icons'
-import {BsPlusCircle} from 'react-icons/bs';
-
 
 const Card = styled.div`
-  width: 27%;
-  margin: 4% 0;
-  border: 1px solid gray;
+  width: 80%;
+  margin: 4% auto;
+  border: 4px solid gray;
+  padding: 2%;
   color: gray;
   text-align: center;
 `;
@@ -29,16 +26,13 @@ const Add = styled.div`
 `;
 
 
-function ProductCard() {
+function ProductCard(props) {
+  const {name, description, price} = props;
   return (
     <Card>
-      <h3>Product Title</h3>
-      <Image>
-        <FontAwesomeIcon icon={faImage} size="7x" />
-      </Image>
-      {/* <Add>
-        <BsPlusCircle size="2rem" />
-      </Add> */}
+      <h3>{name}</h3>
+      <p>{description}</p>
+      <p>{price}</p>
     </Card>
   );
 }
