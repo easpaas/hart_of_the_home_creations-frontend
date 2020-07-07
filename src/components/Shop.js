@@ -53,6 +53,7 @@ function Shop() {
     <>
     <Header />
     <div style={{backgroundColor: 'lightpink', padding: '5%' }}>
+    {/* Return a list of products from database */}
       {
         products.map(item => {
           return (

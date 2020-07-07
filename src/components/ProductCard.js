@@ -4,7 +4,9 @@ import styled from 'styled-components';
 
 const Card = styled.div`
   width: 80%;
-  margin: 4% auto;
+  margin: 2% auto;
+  display: flex;
+  justify-content: space-between;
   border: 4px solid gray;
   padding: 2%;
   color: gray;
@@ -30,9 +32,18 @@ function ProductCard(props) {
   const {name, description, price} = props;
   return (
     <Card>
-      <h3>{name}</h3>
-      <p>{description}</p>
-      <p>{price}</p>
+      <div className="Image">
+        {
+          // TODO 
+          // map over images array
+          // only use first image for preview
+        }
+      </div>
+      <div className="Content">
+        <h3>{name}</h3>
+        <p>{description}</p>
+        <p>{price}</p>
+      </div>
     </Card>
   );
 }
