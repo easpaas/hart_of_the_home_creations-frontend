@@ -1,20 +1,21 @@
 import React, {useState, useEffect} from 'react';
-import styled from 'styled-components';
+import './Home.css';
+// import styled from 'styled-components';
 
 import {auth} from '../utils/auth.js';
 import Header from './Header';
 import Footer from './Footer';
 import Blog from './BlogPreview';
 
-const BlogContainer = styled.div`
-  max-width: 100%;
-  background-color: lightpink;
-  padding: 4% 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 800px;
-`;
+// const BlogContainer = styled.div`
+//   max-width: 100%;
+//   background-color: lightpink;
+//   padding: 4% 0;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   height: 800px;
+// `;
 
 function Home() {
   const [blog, setBlog] = useState([]);
@@ -47,7 +48,7 @@ function Home() {
   return (
     <>
     <Header />
-    <BlogContainer>
+    <div className="BlogContainer">
       {
         blog.map((entry) => {
           return(
@@ -60,7 +61,7 @@ function Home() {
           )
         })
       }
-    </BlogContainer>
+    </div>
     <Footer />
     </>
   );
