@@ -11,8 +11,8 @@ import './Login.css';
 
 export default function Login() {
   const [credentials, setCredentials] = useState({
-    username: "admin", 
-    password: "password"
+    username: "", 
+    password: ""
   });
   const [attempts, setAttempts] = useState(0);
 
@@ -24,18 +24,23 @@ export default function Login() {
       // run a timer for 1 minute that hides the submit button 
   }, [])
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("form submitted")
+  };
+
   return (
-    <div className="login">
-      <form>
+    <div className="login-form">
+      <form onSubmit={handleSubmit}>
         <label>
           Username:
-          <input type="text" name="username" />
+          <input type="text" name="username" value={credentials.username} />
         </label>
         <label>
           Password:
-          <input type="password" name="password" />
+          <input type="password" name="password" value={credentials.password} />
         </label>
-        <input type="submit" value="Submit" />
+        <button>Submit</button>
       </form>
     </div>
   );

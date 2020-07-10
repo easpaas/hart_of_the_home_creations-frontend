@@ -1,54 +1,40 @@
 import React from 'react';
+// import Login from './Login';
 import './Header.css';
 
-import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import {RiShoppingBagLine} from 'react-icons/ri';
 
 
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: grey;
-  font-size: 1.2rem;
-  font-family: 'Playfair Display', serif;
-  padding: 1%;
-  &:hover {
-    color: lightpink;
-    border: 1px dashed grey;
-  }
-`;
-
-const CartLink = styled.div`
-  width: 10px;
-  &:hover {
-    cursor: pointer;
-  }
-`;
-
 const Header = () => {
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    console.log("login button clicked");
+    //  TODO - <Login /> should display inputs for username and password
+  };
+
   return ( 
     <>
-    <div className="Hidden">
+    <div className="login">
       <div 
         className="login_btn" 
-        onClick={() => {
-          console.log('login modal will pop open here')}
-        }>
+        onClick={handleClick}>
         Login
       </div>
     </div>
     <div className="Header" >
       <h1>Hart Of The Home Creations</h1>
       <div className="Nav">
-        <StyledLink to="/" style={{textDecoration: "none"}}>Home</StyledLink>
-        <StyledLink to="/shop" style={{textDecoration: "none"}}>Shop</StyledLink>
-        <StyledLink to="/about" style={{textDecoration: "none"}}>About</StyledLink>
+        <Link to="/" style={{textDecoration: "none"}} className="Link">Home</Link>
+        <Link to="/shop" style={{textDecoration: "none"}} className="Link">Shop</Link>
+        <Link to="/about" style={{textDecoration: "none"}} className="Link">About</Link>
       </div>
       <div className="Cart">
-        <Link to="/cart" style={{textDecoration: "none", color: "lightpink"}}>
-          <CartLink>
+        <Link to="/cart" style={{textDecoration: "none", color: "lightpink"}} className="Link">
+          <div className="CartLink">
             <RiShoppingBagLine />
-          </CartLink>
+          </div>
         </Link>
       </div>
     </div>
