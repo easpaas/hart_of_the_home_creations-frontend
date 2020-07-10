@@ -2,23 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Preview = styled.div`
-  width: 60%;
-  border: 4px solid;
-  margin: 2% auto;
   padding: 1%;
+  margin: 2%;
 `;
 
 export default function BlogPreview (props) {
   const {title, post, postDate} = props;
   return (
     <Preview>
-      <h2>{title}</h2>
-      <p>{postDate}</p>
-      <p>
-      {
-        post.split(" ").splice(0,10).join(" ") + "..."
-      }
-      </p>
+      <div style={{textAlign: "left", marginLeft: "4%"}}>
+        <h2 style={{margin: '0'}}>{title}</h2>
+        <p>Posted: {postDate}</p>
+      </div>
+      <hr style={{ width: "90%", height: "2px", color: "black", backgroundColor: "black", margin: "1% auto" }}/>
+      <div style={{width: '60%', textAlign: "left", lineHeight: "150%", margin: '2% auto'}}>{post}</div>
     </Preview>
   );
 };

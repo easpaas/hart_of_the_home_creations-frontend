@@ -1,6 +1,7 @@
 .login {
   width: 100%;
-  /* background-color: black; */
+  background-color: black;
+  padding: 0.2%;
   /* color: white; */
 }
 .Hidden {
@@ -24,7 +25,7 @@
   background-color: black;
   color: lightpink;
   text-align: center;
-  padding: 2%;
+  padding: 1%;
   margin: 0;
 }
 h1 {
@@ -54,7 +55,8 @@ h1 {
   border: 1px dashed grey;
 }
 .CartLink {
-  width: 10px;
+  /* width: 10px; */
+  display: inline-block;
 }
 .CartLink:hover {
   cursor: pointer;
