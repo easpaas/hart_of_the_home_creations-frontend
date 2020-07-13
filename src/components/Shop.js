@@ -31,9 +31,6 @@ const PaginationContainer = styled.div`
 `;
 
 
-// TODO axios call for products, if pulling from database
-
-
 function Shop() {
   const [products, setProducts] = useState([]);
 
@@ -58,7 +55,7 @@ function Shop() {
         products.map(item => {
           return (
             <ProductCard
-              key={item.id}
+              key={item.product_id}
               name={item.name}
               description={item.descrition}
               price={item.price}

@@ -1,5 +1,5 @@
 import React from 'react';
-// import Login from './Login';
+import Login from './Login';
 import './Header.css';
 
 import {Link} from 'react-router-dom';
@@ -8,20 +8,25 @@ import {RiShoppingBagLine} from 'react-icons/ri';
 
 const Header = () => {
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    console.log("login button clicked");
-    //  TODO - <Login /> should display inputs for username and password
-  };
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   console.log("login button clicked");
+
+  //   //  TODO - <Login /> should display inputs for username and password
+  // };
 
   return ( 
     <>
     <div className="login">
-      <div 
+      {/* <div 
         className="login_btn" 
-        onClick={handleClick}>
+        onClick={() => {
+          // TODO toggle class between btn and form
+        }}
+      >
         Login
-      </div>
+      </div> */}
+    <Login />
     </div>
     <div className="Header" >
       <h1>Hart Of The Home Creations</h1>
