@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Login from './Login';
 import './Header.css';
 
@@ -7,26 +7,28 @@ import {RiShoppingBagLine} from 'react-icons/ri';
 
 
 const Header = () => {
+  const [loginClick, setLoginClick] = useState(false)
 
-  // const handleClick = (e) => {
-  //   e.preventDefault();
-  //   console.log("login button clicked");
+  // useEffect(() => {
 
-  //   //  TODO - <Login /> should display inputs for username and password
-  // };
+  // }, [loginClick])
 
   return ( 
     <>
     <div className="login">
-      {/* <div 
-        className="login_btn" 
-        onClick={() => {
-          // TODO toggle class between btn and form
-        }}
-      >
-        Login
-      </div> */}
-      <Login />
+      {
+        loginClick ?
+        <Login />
+        :
+        <div 
+          className="login_btn" 
+          onClick={() => {
+            setLoginClick(true)
+          }}
+        >
+          Login
+        </div> 
+      }
     </div>
     <div className="Header" >
       <h1>Hart Of The Home Creations</h1>

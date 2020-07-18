@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import contact from '../assets/contact.png';
 
-
 import Header from "./Header";
 import Footer from "./Footer";
 import SocialMedia from "./SocialMedia";
