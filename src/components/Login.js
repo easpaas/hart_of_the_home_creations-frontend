@@ -3,14 +3,6 @@ import './Login.css';
 import axios from 'axios';
 
 
-/*
-  For the purpose of testing the UI 
-
-  * credentials will be compared against "admin" and "password"
-  * 
-*/
-
-
 export default function Login() {
   const [credentials, setCredentials] = useState({
     username: "", 

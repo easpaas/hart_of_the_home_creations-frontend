@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       <Route exact path='/' component={Home} />
       <Route path='/shop' component={Shop} />
+      {/* TODO - private routes that authorized user can see and access CRUD for products and blogs */}
       <Route path='/about' component={About} />
       <Route exact path="/cart" component={ShoppingCart} />
     </div>

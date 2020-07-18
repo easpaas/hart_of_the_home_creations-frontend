@@ -1,0 +1,22 @@
+.Card {
+  width: 80%;
+  margin: 2% auto;
+  display: flex;
+  justify-content: space-between;
+  border: 4px solid gray;
+  padding: 2%;
+  color: gray;
+  text-align: center;
+}
+.Image {
+  max-width: 100%;
+}
+.Image:hover {
+    filter: blur(1px);
+}
+.Add {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
