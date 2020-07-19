@@ -7,12 +7,12 @@ function ProductCard(props) {
   const {name, description, price} = props;
   return (
     <div className="Card">
-      <h3>{name}</h3>
+      <h2>{name}</h2>
       <div className="Image">
         <img src={product1} alt="sheep chair product"/>
       </div>
       <div className="Content">
-        <p>{price}</p>  
+        <p style={{fontSize: '1.3rem'}}>${price}</p>  
         <p>{description}</p>
       </div>
     </div>

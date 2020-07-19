@@ -16,7 +16,7 @@ img{
   width: 100%;
 }
 .Image:hover {
-    filter: blur(1px);
+  filter: blur(1px);
 }
 .Add {
   display: flex;
