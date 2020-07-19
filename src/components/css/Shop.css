@@ -1,3 +1,7 @@
+.ShopContainer {
+  background-color: lightpink;
+  padding: 5%;
+}
 .DeckContainer {
   background-color: black;
   max-width: 80%;

@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './Shop.css';
+import './css/Shop.css';
 
 import {auth} from'../utils/auth';
 import Header from './Header';
@@ -9,12 +9,18 @@ import ProductCard from './ProductCard';
 
 function Shop() {
   const [products, setProducts] = useState([]);
+  const [productImages, setProductImages] = useState([])
 
   useEffect(() => {
     auth()
       .get("http://localhost:8080/api/products")
       .then(response => {
-        setProducts(response.data);
+        // TODO - response.data should contain a data
+        // object with products array and images array
+        setProducts(response.data)
+        
+        // setProducts(response.data.products);
+        // setProductImages(response.data.images)
       })
       .catch(error => {
         console.log(error);
@@ -25,9 +31,9 @@ function Shop() {
   return (
     <>
     <Header />
-    <div style={{backgroundColor: 'lightpink', padding: '5%' }}>
-    {/* Return a list of products from database */}
+    <div className="ShopContainer">
       {
+        // Return a list of products from server
         products.map(item => {
           return (
             <ProductCard

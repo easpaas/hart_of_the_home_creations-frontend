@@ -1,0 +1,20 @@
+.Preview { 
+  padding: 1%;
+  margin: 2%;
+}
+.BlogContainer {
+  text-align: left;
+}
+hr {
+  width: 90%;
+  height: 2px;
+  color: black;
+  background-color: black;
+  margin: 1% auto;
+}
+.BlogContent {
+  width: 60%;
+  text-align: left;
+  line-height: 150%;
+  margin: 2% auto;
+}

@@ -1,0 +1,27 @@
+.AboutContainer {
+  background-color: lightpink;
+  padding: 5%;
+}
+.AboutContent {
+  max-width: 35%;
+  margin: 2% auto;
+  padding: 2%;
+  background-color: black;
+}
+#profile {
+  width: 100%;
+}
+.Profile {
+  background-color: lightpink;
+  border: 2px solid;
+  padding: 2%;
+  color: black;
+  margin-top: 2%;
+}
+.ContactBar {
+  background-color: black;
+  color: grey;
+  width: 35%;
+  margin: 0% auto;
+  padding: 2%;
+}

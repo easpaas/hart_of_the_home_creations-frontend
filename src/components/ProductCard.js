@@ -1,21 +1,19 @@
 import React from 'react';
-import './ProductCard.css';
+import product1 from '../assets/sheep_chair.jpg';
+
+import './css/ProductCard.css';
 
 function ProductCard(props) {
   const {name, description, price} = props;
   return (
     <div className="Card">
+      <h3>{name}</h3>
       <div className="Image">
-        {
-          // TODO 
-          // map over images array
-          // only use first image for preview
-        }
+        <img src={product1} alt="sheep chair product"/>
       </div>
       <div className="Content">
-        <h3>{name}</h3>
+        <p>{price}</p>  
         <p>{description}</p>
-        <p>{price}</p>
       </div>
     </div>
   );

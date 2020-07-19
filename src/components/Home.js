@@ -1,10 +1,10 @@
 import React, {useState, useEffect} from 'react';
-import './Home.css';
+import './css/Home.css';
 
 import {auth} from '../utils/auth.js';
 import Header from './Header';
 import Footer from './Footer';
-import Blog from './BlogPreview';
+import Blog from './Blog';
 
 
 const offlineState = [
@@ -33,6 +33,8 @@ function Home() {
   const [blog, setBlog] = useState([]);
   const [offlineData, setOfflineData] = useState(offlineState);
 
+  // retrieve JSON Web Token to localstorage
+  // fetch blogs from server
   useEffect(() => {
     const token = JSON.parse(localStorage.getItem('token'));
       
@@ -51,11 +53,14 @@ function Home() {
     })
   }, []);
   
+
   return (
     <>
     <Header />
     <div className="BlogContainer">
       {
+        // Display offline blog data when server is down
+        // otherwise display blogs from server 
         blog.length <= 0 ? 
           offlineData.map((entry) => {
             return (

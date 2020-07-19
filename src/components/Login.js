@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import './Login.css';
+import './css/Login.css';
 import axios from 'axios';
 
 
@@ -26,7 +26,7 @@ export default function Login() {
       .post('http://localhost:8080/api/auth/login', credentials)
       .then(response => {
         sessionStorage.setItem('token', JSON.stringify(response.data.token));
-        // TODO - set isLoggedIn true state 
+        sessionStorage.setItem('isLoggedIn', true)
       })
       .catch(error => {
         console.log(error)
