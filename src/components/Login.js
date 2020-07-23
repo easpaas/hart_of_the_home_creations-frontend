@@ -27,11 +27,17 @@ export default function Login() {
       .then(response => {
         sessionStorage.setItem('token', JSON.stringify(response.data.token));
         sessionStorage.setItem('isLoggedIn', true)
+
+        // TODO: after admin has logged in... do this thing.... (HERE)
+
       })
       .catch(error => {
         console.log(error)
       })
-  };
+
+      // TODO: after admin has logged in... do this thing.... (OR HERE)
+
+    };
 
   return (
     <div className="login-form">
@@ -44,7 +50,7 @@ export default function Login() {
           Password:
           <input type="password" name="password" value={credentials.password} onChange={handleChange} />
         </label>
-        <button>Submit</button>
+        <button>Login</button>
       </form>
     </div>
   );
