@@ -1,9 +1,11 @@
 .FooterStyles {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: space-evenly;
   background-color: black;
   margin: 0;
+  text-align: center;
 }
 h4 {
   color: lightpink;
