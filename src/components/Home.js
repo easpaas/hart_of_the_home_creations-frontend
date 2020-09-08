@@ -1,66 +1,38 @@
 import React, {useState, useEffect} from 'react';
+import {connect} from 'react-redux';
+import Loader from 'react-loader-spinner'
 import './css/Home.css';
 
-import {auth} from '../utils/auth.js';
 import Header from './Header';
 import Footer from './Footer';
 import Blog from './Blog';
-import {testOfflineBlogs as offlineBlogData} from './Home.data.js';
+import { fetchBlogs, fetchProducts } from '../redux/actions/actionCreators.js';
 
-function Home() {
-  const [blog, setBlog] = useState([]);
-  const [offlineData, setOfflineData] = useState(offlineBlogData);
+function Home({fetchBlogs, fetchProducts}) {
 
-  // retrieve JSON Web Token to localstorage
-  // fetch blogs from server
   useEffect(() => {
-    const token = JSON.parse(localStorage.getItem('token'));
-      
-    auth()
-    .get('http://localhost:8080/api/blogs', {
-      headers: {
-        Authorization: token
-      }
-    })
-    .then(response => {
-      setBlog(response.data);
-    })
-    .catch(error => {
-      console.log(error)
-      // setOfflineData(offlineState)
-    })
-  }, []);
+    fetchBlogs();
+    fetchProducts();
+  }, [fetchBlogs, fetchProducts]);
   
 
   return (
     <>
     <Header />
-    <div className="BlogContainer">
+    <div className="BlogPreviewContainer">
       {
-        // Display offline blog data when server is down
-        // otherwise display blogs from server 
-        blog.length <= 0 ? 
-          offlineData.map((entry) => {
-            return (
-              <Blog
-                key={entry.id}
-                title={entry.heading}
-                post={entry.content}
-                postDate={entry.postDate}
-              />
-            )
-          })
-        :
-          blog.map((entry) => {
-          return(
-            <Blog 
-              key={entry.id}
-              title={entry.heading} 
-              post={entry.content}
-              postDate={entry.postDate}
-            />
-          )
-        })
+        // If data fetching is loading
+        // display loader spinner
+        loading &&
+          <Loader
+            type="Puff"
+            color="#00BFFF"
+            height={100}
+            width={100}
+            timeout={5000} //5 secs
+          />
+        // TODO - add a blog preview 
+        
       }
     </div>
     <Footer />
@@ -68,4 +40,11 @@ function Home() {
   );
 }
 
-export default Home;
+const mapStateToProps = state => {
+  return {
+    loading: state.loading,
+    error: state.error
+  }
+};
+
+export default connect(mapStateToProps, { fetchBlogs, fetchProducts })(Home)

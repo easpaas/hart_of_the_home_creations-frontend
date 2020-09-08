@@ -4,12 +4,22 @@ import {FETCHING_BLOGS, FETCH_BLOGS_SUCCESS, FETCH_BLOGS_ERROR, FETCHING_PRODUCT
 
 // Blog Redux Initial State
 export const initBlogState = {
-  // TODO - add blog state
+  blog_id: null,
+  heading: '',
+  date: '',
+  content: '',
+  loading: false,
+  error: ''
 };
 
 // Product Redux Initial State
 export const initProductState = {
-  // TODO - add product state
+  product_id: null,
+  name: '',
+  description: '',
+  price: null,
+  loading: false, 
+  error: '',
 };
 
 
@@ -19,10 +29,17 @@ export const blogReducer = (state = initBlogState, action) => {
     case FETCHING_BLOGS: 
       return {
         ...state, 
+        loading: true,
       }
     case FETCH_BLOGS_SUCCESS: 
       return {
-        ...state, 
+        // keep existing state
+        ...state,
+        // specifies state attributes to change
+        blog_id: action.payload.blog_id,
+        heading: action.payload.heading,
+        date: action.payload.date,
+        content: action.payload.content
       }
       case FETCH_BLOGS_ERROR: 
       return {
@@ -39,10 +56,15 @@ export const productReucer = (state = initProductState, action) => {
     case FETCHING_PRODUCTS: 
       return {
         ...state, 
+        loading: true, 
       }
     case FETCH_PRODUCTS_SUCCESS: 
       return {
         ...state, 
+        product_id: action.payload.product_id,
+        name: action.payload.name, 
+        description: action.payload.description,
+        price: action.payload.price,
       }
       case FETCH_PRODUCTS_ERROR: 
       return {

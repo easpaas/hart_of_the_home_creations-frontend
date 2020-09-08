@@ -1,16 +1,20 @@
 import axios from 'axios';
+
 import {FETCHING_BLOGS, FETCH_BLOGS_SUCCESS, FETCH_BLOGS_ERROR, FETCHING_PRODUCTS, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR} from "./actions.js";
+import {auth} from '../utils/auth.js';
+
 
 export const fetchBlogs = () => {
   return dispatch => {
     dispatch({ type: FETCHING_BLOGS });
-    axios.get('get all blogs <- replaced with API endpoint')
-    .then(response => {
-      dispatch({ type: FETCH_BLOGS_SUCCESS, payload: response.data });
-    })
-    .catch(error => {
-      dispatch({ type: FETCH_BLOGS_ERROR, payload: error.response.message })
-    })
+    auth()
+      .get('http://localhost:8080/api/blogs')
+      .then(response => {
+        dispatch({ type: FETCH_BLOGS_SUCCESS, payload: response.data });
+      })
+      .catch(error => {
+        dispatch({ type: FETCH_BLOGS_ERROR, payload: error.response.message })
+      })
   }
 };
 

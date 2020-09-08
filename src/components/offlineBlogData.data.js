@@ -1,4 +1,4 @@
-export const testOfflineBlogs = [
+export const offlineBlogData = [
   {
     id: 69,
     heading: "The house in the distance", 
