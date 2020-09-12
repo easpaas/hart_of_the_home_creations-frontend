@@ -1,20 +1,33 @@
-.Preview { 
+.blog { 
   padding: 1%;
-  margin: 2%;
+  margin: 2% auto;
+  width: 65%;
 }
-.BlogContainer {
-  text-align: left;
+.blog-header {
+  text-align: center;
+}
+.blog-header h1 {
+  margin: 2% 0;
+}
+.blog-header p {
+  font-weight: bold;
 }
 hr {
-  width: 90%;
   height: 2px;
   color: black;
   background-color: black;
-  margin: 1% auto;
+  margin: 3% auto;
 }
-.BlogContent {
-  width: 60%;
-  text-align: left;
-  line-height: 150%;
+.blog-content {
   margin: 2% auto;
+  line-height: 150%;
+}
+.date-icons {
+  display: flex;
+  justify-content: space-between;
+}
+.material-icons {
+  width: 10%;
+  display: flex;
+  justify-content: space-between;
 }
