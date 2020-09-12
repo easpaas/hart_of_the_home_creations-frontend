@@ -47,7 +47,7 @@ function Shop() {
           );
         })
         :
-        <div style={{width: '50%', margin: '2% auto', color: 'red'}}>
+        <div style={{width: '50%', height: '800px', margin: '2% auto', color: 'red'}}>
           No products found
         </div>
       }
