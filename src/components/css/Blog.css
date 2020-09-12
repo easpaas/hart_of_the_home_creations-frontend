@@ -23,11 +23,13 @@ hr {
   line-height: 150%;
 }
 .date-icons {
+  width: 55%;
+  margin: 2% auto;
   display: flex;
   justify-content: space-between;
 }
 .material-icons {
-  width: 10%;
+  width: 20%;
   display: flex;
   justify-content: space-between;
 }

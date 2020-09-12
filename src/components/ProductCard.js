@@ -1,4 +1,7 @@
 import React from 'react';
+import Button from '@material-ui/core/Button';
+import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
+
 import product1 from '../assets/sheep_chair.jpg';
 
 import './css/ProductCard.css';
@@ -12,9 +15,11 @@ function ProductCard(props) {
       </div>
       <div className="Content">
         <h2>{name}</h2>
-        <p style={{fontSize: '1.3rem'}}>${price}</p>  
         <p>{description}</p>
-        <button>Add to Cart</button>
+        <p>${price}</p>  
+        <Button id="purchase">
+          <AddShoppingCartIcon />
+        </Button>
       </div>
     </div>
   );

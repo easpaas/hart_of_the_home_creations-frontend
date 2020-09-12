@@ -39,7 +39,18 @@ function Home() {
       {
         // Display offline blog data when server is down
         // otherwise display blogs from server 
-        blog.length <= 0 ? 
+        blog.length > 0 ? 
+          blog.map((entry) => {
+            return(
+              <Blog 
+                key={entry.id}
+                title={entry.heading} 
+                post={entry.content}
+                postDate={entry.postDate}
+              />
+            )
+          })
+        :
           offlineData.map((entry) => {
             return (
               <Blog
@@ -50,17 +61,6 @@ function Home() {
               />
             )
           })
-        :
-          blog.map((entry) => {
-          return(
-            <Blog 
-              key={entry.id}
-              title={entry.heading} 
-              post={entry.content}
-              postDate={entry.postDate}
-            />
-          )
-        })
       }
     </div>
     <Footer />
