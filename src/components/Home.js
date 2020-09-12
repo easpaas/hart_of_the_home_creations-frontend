@@ -5,7 +5,7 @@ import {auth} from '../utils/auth.js';
 import Header from './Header';
 import Footer from './Footer';
 import Blog from './Blog';
-import {testOfflineBlogs as offlineBlogData} from './Home.data.js';
+import {testOfflineBlogs as offlineBlogData} from '../utils/Home.data.js';
 
 function Home() {
   const [blog, setBlog] = useState([]);
