@@ -7,7 +7,7 @@ https://wireframe.cc/hbV6Iy
 
 ---
 ## Deployment URL
-https://hartofhome.netlify.app/
+https://hartcreations.netlify.app/
 
 ## Backend Repository
 https://github.com/easpaas/hart_of_the_home-backend
