@@ -21,9 +21,17 @@ img{
   flex-direction: column;
   justify-content: center;
 }
+.Content p {
+  font-size: 1.3rem;
+}
 .Add {
   display: flex;
   flex-direction: row-reverse;
   margin-right: 5%;
   margin-bottom: 5%;
+}
+#purchase {
+  border: 1px solid palevioletred;
+  width: 30%;
+  margin: 0 auto;
 }

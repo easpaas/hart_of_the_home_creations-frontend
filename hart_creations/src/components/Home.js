@@ -5,7 +5,7 @@ import {auth} from '../utils/auth.js';
 import Header from './Header';
 import Footer from './Footer';
 import Blog from './Blog';
-import {testOfflineBlogs as offlineBlogData} from './Home.data.js';
+import {testOfflineBlogs as offlineBlogData} from '../utils/Home.data.js';
 
 function Home() {
   const [blog, setBlog] = useState([]);
@@ -39,7 +39,18 @@ function Home() {
       {
         // Display offline blog data when server is down
         // otherwise display blogs from server 
-        blog.length <= 0 ? 
+        blog.length > 0 ? 
+          blog.map((entry) => {
+            return(
+              <Blog 
+                key={entry.id}
+                title={entry.heading} 
+                post={entry.content}
+                postDate={entry.postDate}
+              />
+            )
+          })
+        :
           offlineData.map((entry) => {
             return (
               <Blog
@@ -50,17 +61,6 @@ function Home() {
               />
             )
           })
-        :
-          blog.map((entry) => {
-          return(
-            <Blog 
-              key={entry.id}
-              title={entry.heading} 
-              post={entry.content}
-              postDate={entry.postDate}
-            />
-          )
-        })
       }
     </div>
     <Footer />
