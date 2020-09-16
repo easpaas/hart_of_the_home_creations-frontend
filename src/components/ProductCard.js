@@ -1,5 +1,6 @@
 import React from 'react';
 import product1 from '../assets/sheep_chair.jpg';
+import {addToCart} from '../redux/cart/actionCreators.js'
 
 import './css/ProductCard.css';
 
@@ -14,7 +15,8 @@ function ProductCard(props) {
         <h2>{name}</h2>
         <p style={{fontSize: '1.3rem'}}>${price}</p>  
         <p>{description}</p>
-        <button>Add to Cart</button>
+        
+        <button onClick={() => console.log('added')}>Add to Cart</button>
       </div>
     </div>
   );

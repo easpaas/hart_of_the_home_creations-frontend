@@ -6,9 +6,11 @@ import './css/Home.css';
 import Header from './Header';
 import Footer from './Footer';
 import Blog from './Blog';
-import { fetchBlogs, fetchProducts } from '../redux/actions/actionCreators.js';
+import { fetchBlogs} from '../redux/blogs/actionCreators';
+import { fetchProducts } from '../redux/products/actionCreators.js';
 
-function Home({fetchBlogs, fetchProducts}) {
+
+function Home({fetchBlogs, fetchProducts, loading, error}) {
 
   useEffect(() => {
     fetchBlogs();

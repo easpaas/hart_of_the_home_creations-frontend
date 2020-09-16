@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {auth} from './../utils/auth';
+import {auth} from '../../utils/auth';
 import {FETCHING_BLOGS, FETCH_BLOGS_SUCCESS, FETCH_BLOGS_ERROR} from "./actions.js";
 
 

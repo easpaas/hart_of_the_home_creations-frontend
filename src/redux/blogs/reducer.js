@@ -1,4 +1,4 @@
-import {FETCHING_BLOGS, FETCH_BLOGS_SUCCESS, FETCH_BLOGS_ERROR} from '../actions/actions';
+import {FETCHING_BLOGS, FETCH_BLOGS_SUCCESS, FETCH_BLOGS_ERROR} from './actions';
 
 // Blog Redux Initial State
 export const initBlogState = {
@@ -19,7 +19,7 @@ export const blogReducer = (state = initBlogState, action) => {
       }
     case FETCH_BLOGS_SUCCESS: 
       return {
-        // keep existing state
+        // copy existing state
         ...state,
         // specifies state attributes to change
         blog_id: action.payload.blog_id,

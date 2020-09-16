@@ -1,12 +1,12 @@
 import axios from 'axios';
-import {auth} from './../utils/auth';
+import {auth} from '../../utils/auth';
 import {FETCHING_PRODUCTS, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR} from "./actions.js";
 
 
 export const fetchProducts = () => {
   return dispatch => {
     dispatch({ type: FETCHING_PRODUCTS });
-    axios.get('get all products <- replaced with API endpoint')
+    axios.get('http://localhost:8080/api/products')
     .then(response => {
       dispatch({ type: FETCH_PRODUCTS_SUCCESS, payload: response.data });
     })

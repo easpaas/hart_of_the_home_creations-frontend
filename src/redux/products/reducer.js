@@ -1,4 +1,4 @@
-import {FETCHING_PRODUCTS, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR} from '../actions/actions';
+import {FETCHING_PRODUCTS, FETCH_PRODUCTS_SUCCESS, FETCH_PRODUCTS_ERROR} from './actions';
 
 // Product Redux Initial State
 export const initProductState = {
@@ -10,7 +10,7 @@ export const initProductState = {
   error: '',
 };
 
-export const productReucer = (state = initProductState, action) => {
+export const productReducer = (state = initProductState, action) => {
   switch(action.type) {
     case FETCHING_PRODUCTS: 
       return {
@@ -34,3 +34,5 @@ export const productReucer = (state = initProductState, action) => {
       return state;
   }
 };
+
+export default productReducer;

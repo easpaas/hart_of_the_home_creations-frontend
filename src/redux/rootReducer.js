@@ -1,8 +1,7 @@
 import {combineReducers} from 'redux';
 
-import blogReducer from './blogs/blogs.reducer';
-import productReducer from './products/products.reducer';
-// import {blogReducer, productReducer} from './Reducer'
+import {blogReducer} from './blogs/reducer.js';
+import {productReducer} from './products/reducer.js';
 
 export default combineReducers({
   blogReducer,
