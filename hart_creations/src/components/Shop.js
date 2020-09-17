@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import './css/Shop.css';
 
 import {auth} from'../utils/auth';
-import Header from './Header';
 import Footer from './Footer';
 import ProductCard from './ProductCard';
 import {ProductList} from '../utils/ProductsList.data.js';
@@ -28,7 +27,6 @@ function Shop() {
 
   return (
     <>
-    <Header />
     <div className="ShopContainer">
       {
         products.length > 0 ?

@@ -2,7 +2,6 @@ import React from "react";
 import './css/About.css';
 import contact from '../assets/contact.png';
 
-import Header from "./Header";
 import Footer from "./Footer";
 import SocialMedia from "./SocialMedia";
 
@@ -10,7 +9,6 @@ import SocialMedia from "./SocialMedia";
 function About() {
   return (
     <>
-      <Header />
       <div className="AboutContainer">
         <div className="AboutContent">
           <img id="profile" src={contact} alt="vicki_hunter" />

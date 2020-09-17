@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import "../App.css";
 
-import Header from "./Header";
 import Footer from "./Footer";
 import ProductCard from "./ProductCard";
 
@@ -39,7 +38,6 @@ border-radius: 5px;
 const ShoppingCart = () => {
   return (
     <>
-      <Header />
       <div className="shopping-cart">
         <p style={{color: 'red', fontSize: '1.5rem', border: '4px dashed red', padding: '2%'}}>Dummy items placed in cart to simulate items in the shopping cart.</p>
         {/* 

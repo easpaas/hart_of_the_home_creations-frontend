@@ -1,52 +1,25 @@
-import React, {useState, useEffect} from 'react';
-import Login from './Login';
-import './css/Header.css';
-
-import {Link} from 'react-router-dom';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {RiShoppingBagLine} from 'react-icons/ri';
 
+import './css/Header.css';
 
-const Header = () => {
-  const [loginClick, setLoginClick] = useState(false)
-
-  // useEffect(() => {
-
-  // }, [loginClick])
-
-  return ( 
-    <>
-    <div className="login">
-      {
-        loginClick ?
-        <Login />
-        :
-        <div 
-          className="login_btn" 
-          onClick={() => {
-            setLoginClick(true)
-          }}
-        >
-          Login
-        </div> 
-      }
+const Header = () => (
+  <div className="header">
+    <h1>Hart Of The Home Creations</h1>
+    <div className="options">
+      <Link className="option" to="/" >HOME</Link>
+      <Link className="option" to="/shop" >SHOP</Link>
+      <Link className="option" to="/about" >ABOUT</Link>
     </div>
-    <div className="Header" >
-      <h1>Hart Of The Home Creations</h1>
-      <div className="Nav">
-        <Link to="/" style={{textDecoration: "none"}} className="Link">Home</Link>
-        <Link to="/shop" style={{textDecoration: "none"}} className="Link">Shop</Link>
-        <Link to="/about" style={{textDecoration: "none"}} className="Link">About</Link>
-      </div>
-      <div className="Cart">
-        <Link to="/cart" style={{textDecoration: "none", color: "lightpink"}} className="Link">
-          <div className="CartLink">
-            <RiShoppingBagLine />
-          </div>
-        </Link>
-      </div>
+    <div className="cart">
+      <Link to="/cart" style={{textDecoration: "none", color: "lightpink"}} className="option">
+        <div className="cart-link">
+          <RiShoppingBagLine />
+        </div>
+      </Link>
     </div>
-    </>
-  )
-}
+  </div>
+);
 
 export default Header;

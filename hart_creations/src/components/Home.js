@@ -2,7 +2,6 @@ import React, {useState, useEffect} from 'react';
 import './css/Home.css';
 
 import {auth} from '../utils/auth.js';
-import Header from './Header';
 import Footer from './Footer';
 import Blog from './Blog';
 import {testOfflineBlogs as offlineBlogData} from '../utils/Home.data.js';
@@ -34,7 +33,6 @@ function Home() {
 
   return (
     <>
-    <Header />
     <div className="BlogContainer">
       {
         // Display offline blog data when server is down

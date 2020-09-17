@@ -5,3 +5,7 @@
   background-color: lightpink;
   padding: 2%;
 }
+a {
+  text-decoration: none;
+  color: grey;
+}
