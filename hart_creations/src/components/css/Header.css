@@ -1,63 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400&display=swap');
 
-.login {
-  background-color: black;
-  padding: 0.2%;
-  /* color: white; */
-}
-.Hidden {
-  width: 100%;
-  background-color: black;
-}
-.login_btn {
-  width: 10%;
-  cursor: default;
-  background-color: black;
-  margin: 0;
-  transition: 0.3s;
-  text-align: left;
-}
-.login_btn:hover {
-  color:grey;
-  transition: 0.3s;
-}
-.Header {
+.header {
   background-color: black;
   color: lightpink;
   text-align: center;
   padding: 1%;
   margin: 0;
 }
-.Header h1 {
+.header h1 {
   font-size: 5rem;
   font-family: 'Amatic SC', cursive;
   margin: 1%;
 }
-.Nav {
+.options {
   display: flex;
   justify-content: center;
   font-size: 1rem;
 }
-.Cart {
+.cart {
   display: flex;
   flex-direction: row-reverse;
   margin-right: 5%;
 }
-.Link { 
+.option { 
   text-decoration: none;
   color: grey;
   font-size: 1.2rem;
   font-family: 'Playfair Display', serif;
   padding: 1%;
 }
-.Link:hover {
+.option:hover {
   color: lightpink;
   border: 1px dashed grey;
 }
-.CartLink {
-  /* width: 10px; */
+.cart-link {
   display: inline-block;
 }
-.CartLink:hover {
+.cart-link:hover {
   cursor: pointer;
 }
