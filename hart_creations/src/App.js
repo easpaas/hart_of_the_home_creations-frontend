@@ -4,6 +4,7 @@ import './App.css';
 
 import Header from './components/Header';
 import Home from './components/Home';
+import HomePage from './'
 import Shop from './components/Shop';
 import About from './components/About';
 import ShoppingCart from './components/ShoppingCart';
@@ -13,7 +14,7 @@ function App() {
     <div className="App">
     <Header />
     <Switch>
-      <Route exact path='/' component={Home} />
+      <Route exact path='/' component={HomePage} />
       <Route path='/shop' component={Shop} />
       {/* TODO - private routes that authorized user can see and access CRUD for products and blogs */}
       {/* <SecureRoute path='/admin/blog' component={} /> */}
