@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import {RiShoppingBagLine} from 'react-icons/ri';
 
-import './css/Header.css';
+import { RiShoppingBagLine } from 'react-icons/ri';
+
+import './header.styles.scss';
 
 const Header = () => (
   <div className="header">
@@ -13,7 +14,7 @@ const Header = () => (
       <Link className="option" to="/about" >ABOUT</Link>
     </div>
     <div className="cart">
-      <Link to="/cart" style={{textDecoration: "none", color: "lightpink"}} className="option">
+      <Link to="/cart" className="option">
         <div className="cart-link">
           <RiShoppingBagLine />
         </div>

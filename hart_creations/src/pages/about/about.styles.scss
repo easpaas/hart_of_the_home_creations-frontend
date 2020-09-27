@@ -1,0 +1,33 @@
+.about-page {
+  background-color: lightpink;
+  padding: 5%;
+  
+  .about-content {
+    max-width: 35%;
+    margin: 2% auto;
+    padding: 2%;
+    background-color: black;
+    
+    #profile {
+      width: 100%;
+    }
+    .profile {
+      background-color: lightpink;
+      border: 2px solid;
+      padding: 2%;
+      color: black;
+      margin-top: 2%;
+
+      h2 {
+        font-variant: small-caps;
+      }
+    }
+    .contact-bar {
+      background-color: black;
+      color: grey;
+      width: 35%;
+      margin: 0% auto;
+      padding: 2%;
+    }
+  }
+}

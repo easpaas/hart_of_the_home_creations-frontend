@@ -2,7 +2,8 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import Header from './components/Header';
+import Header from './components/header.component';
+import Footer from './components/Footer/footer.component';
 import Home from './components/Home';
 import HomePage from './'
 import Shop from './components/Shop';
@@ -12,19 +13,19 @@ import ShoppingCart from './components/ShoppingCart';
 function App() {
   return (
     <div className="App">
-    <Header />
-    <Switch>
-      <Route exact path='/' component={HomePage} />
-      <Route path='/shop' component={Shop} />
-      {/* TODO - private routes that authorized user can see and access CRUD for products and blogs */}
-      {/* <SecureRoute path='/admin/blog' component={} /> */}
-      {/* <SecureRoute path='/admin/product' component={} /> */}
-      {/* <Route path='/blogs' component={Blogs} /> */}
-      {/* <Route path='/products' component={Products} /> */}
-      
-      <Route path='/about' component={About} />
-      <Route exact path="/cart" component={ShoppingCart} />
-    </Switch>
+      <Header />
+      <Switch>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/shop' component={Shop} />
+        {/* TODO - private routes that authorized user can see and access CRUD for products and blogs */}
+        {/* <SecureRoute path='/admin/blog' component={} /> */}
+        {/* <SecureRoute path='/admin/product' component={} /> */}
+        {/* <Route path='/blogs' component={Blogs} /> */}
+        {/* <Route path='/products' component={Products} /> */}
+        <Route path='/about' component={About} />
+        <Route exact path="/cart" component={ShoppingCart} />
+      </Switch>
+      <Footer />
     </div>
   );
 }

@@ -1,8 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import './css/Home.css';
 
 import {auth} from '../utils/auth.js';
-import Footer from './Footer';
 import Blog from './Blog';
 import {testOfflineBlogs as offlineBlogData} from '../utils/Home.data.js';
 
