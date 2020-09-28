@@ -1,0 +1,36 @@
+.product-card {
+  width: 55%;
+  margin: 2% auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  color: gray;
+
+  .image-container {
+    max-width: 45%;
+
+    &:hover {
+      filter: blur(1px);
+    }
+
+    img{
+      width: 100%;
+    }
+  }
+  .content {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p {
+      font-size: 1.3rem;
+    }
+
+    #purchase {
+      border: 1px solid palevioletred;
+      width: 30%;
+      margin: 0 auto;
+    }
+  }
+}

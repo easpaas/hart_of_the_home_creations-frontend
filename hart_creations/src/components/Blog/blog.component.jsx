@@ -2,14 +2,12 @@ import React from 'react';
 import Fab from '@material-ui/core/Fab';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ShareIcon from '@material-ui/icons/Share';
-import './css/Blog.css';
 
-
-export default function Blog (props) {
+function Blog (props) {
   const {title, post, postDate} = props;
+
   return (
     <div className="blog">
-      {/* Blog Title and Date */}
       <div className="blog-header">
         <h1>{title}</h1>
         <div className="date-icons">
@@ -24,10 +22,12 @@ export default function Blog (props) {
           </div>
         </div>
       </div>
-      {/* Adds horizontal line */}
-      <hr/>
-      {/* Blog Post */}
-      <div className="blog-content">{post}</div>
+
+      <hr />
+
+      <div className="blog-content">
+        {post}
+      </div>
     </div>
   );
 };
