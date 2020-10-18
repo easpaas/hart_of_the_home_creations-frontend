@@ -7,7 +7,7 @@ import {
   faPinterest
 } from "@fortawesome/free-brands-svg-icons";
 
-import './social-media-icon.styles.scss';
+import './social-media-icons.styles.scss';
 
 
 const SocialMediaIcons = () => (

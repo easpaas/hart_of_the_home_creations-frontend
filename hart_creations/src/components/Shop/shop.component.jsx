@@ -8,7 +8,10 @@ const Shop = () => (
     SHOP HERE
     {
       // TODO - map over products list from redux and return a product card 
+    
     }
+
+    <ProductCard />
   </div>
 );
 

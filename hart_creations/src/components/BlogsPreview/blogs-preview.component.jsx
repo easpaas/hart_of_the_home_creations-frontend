@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './blogs-preview.styles';
+import './blogs-preview.styles.scss';
 
 const BlogsPreview = () => (
   <div className='blogs-preview'>

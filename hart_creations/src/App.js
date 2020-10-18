@@ -2,13 +2,12 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import Header from './components/header.component';
+import Header from './components/Header/header.component';
 import Footer from './components/Footer/footer.component';
-import Home from './components/Home';
-import HomePage from './'
-import Shop from './components/Shop';
-import About from './components/About';
-import ShoppingCart from './components/ShoppingCart';
+import HomePage from './pages/homepage/homepage.component';
+import Shop from './components/Shop/shop.component';
+import About from './pages/about/about.component';
+import ShoppingCart from './components/ShoppingCart/shopping-cart.component';
 
 function App() {
   return (

@@ -1,12 +1,13 @@
 import React from "react";
 
-import contact from '../assets/contact.png';
-import Footer from "./Footer";
-import SocialMedia from "./SocialMedia";
+import contact from '../../assets/contact.png';
+import Footer from "../../components/Footer/footer.component";
+import SocialMedia from "../../components/SocialMediaIcons/social-media-icons.component";
 
-import './css/About.css';
+import './about.styles.scss';
 
 const About = () => (
+  <>
   <div className="about-page">
     <div className="about-content">
       <img id="profile" src={contact} alt="Vicki Hunter" />
@@ -24,6 +25,7 @@ const About = () => (
     </div>
   </div>
   <Footer />
+  </>
 );
 
 export default About;

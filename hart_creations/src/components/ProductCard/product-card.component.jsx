@@ -1,24 +1,25 @@
 import React from 'react';
-import Button from '@material-ui/core/Button';
-import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
-
-import product1 from '../assets/sheep_chair.jpg';
+import { Card, Button } from 'react-bootstrap'
 
 import './product-card.styles.scss';
 
 const ProductCard = () => (
   <div className='product-card'>
-    <div className='image-container'>
-      <img src={product1} alt="sheep chair" />
-    </div>
-    <div className='content'>
-      <h2>NAME</h2>
-      <p>DESCRIPTION</p>
-      <p>$PRICE</p>
-      <Button id='purchase'>
-        <AddShoppingCart />
-      </Button>
-    </div>
+    <Card style={{ width: '18rem' }}>
+      <span  className='image-container'>
+        <img src="https://i.ibb.co/87kLCNv/sheep-chair.jpg" alt="sheep chalk print on gray wooden chair" />
+      </span>
+      <Card.Body>
+        <h3>Title</h3>
+        <Card.Text>
+          Short description 
+        </Card.Text>
+        <Card.Text>
+          $ Price
+        </Card.Text>
+        <Button style={{ backgroundColor: 'lightpink', padding: '1.5%'}}>Add To Cart</Button>
+      </Card.Body>
+    </Card>
   </div>
 );
 
