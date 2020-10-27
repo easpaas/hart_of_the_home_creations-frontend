@@ -12,14 +12,14 @@ function Blog (props) {
         <h1>{title}</h1>
         <div className="date-icons">
           <p>Posted: {postDate}</p>
-          <div className="material-icons">
+          {/* <div className="material-icons">
             <Fab size="small" aria-label="share">
               <ShareIcon />
             </Fab>
             <Fab size="small" aria-label="like">
               <FavoriteIcon />
             </Fab>
-          </div>
+          </div> */}
         </div>
       </div>
 
