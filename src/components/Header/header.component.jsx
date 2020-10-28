@@ -7,10 +7,9 @@ import './header.styles.scss';
 
 const Header = () => (
   <div className="header">
-    <h1>Hart Of The Home Creations</h1>
+    <h1>Hart Of The Home Creations</h1> <p>Inspired by life. Powered by love</p>
     <div className="options">
       <Link className="option" to="/" >HOME</Link>
-      <Link className="option" to="/shop" >SHOP</Link>
       <Link className="option" to="/about" >ABOUT</Link>
     </div>
     <div className="cart">

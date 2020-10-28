@@ -7,3 +7,15 @@
 //   justify-content: space-between;
 //   /* height: 800px; */
 // }
+.home-page {
+
+  .welcome-content {
+    max-width: 80%;
+    margin: 0 auto;
+    padding: 5%;
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+}
