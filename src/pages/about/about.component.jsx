@@ -24,7 +24,6 @@ const About = () => (
       <SocialMedia />
     </div>
   </div>
-  <Footer />
   </>
 );
 
