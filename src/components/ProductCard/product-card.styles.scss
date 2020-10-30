@@ -1,16 +1,14 @@
 .product-card {
-  width: 55%;
-  margin: 2% auto;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   padding: 2%;
   color: gray;
 
   .image-container {
-    max-width: 45%;
 
     &:hover {
-      filter: blur(1px);
+      opacity: 0.8;
     }
 
     img{

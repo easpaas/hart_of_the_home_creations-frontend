@@ -8,7 +8,7 @@ import { RiShoppingBagLine } from 'react-icons/ri';
 import './header.styles.scss';
 
 const Header = () => (
-  <div style={{backgroundImage: 'url(`${homeBanner}`)'}} className="header">
+  <div className="header">
     <h1>Hart Of The Home Creations</h1> <p>Inspired by life. Powered by love</p>
     <div className="options">
       <Link className="option" to="/">HOME</Link>
