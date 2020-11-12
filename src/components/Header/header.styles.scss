@@ -1,45 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400&display=swap');
 
 .header {
-  background-image: url('https://unsplash.com/photos/F4w_T20l4-o');
   text-align: center;
   padding: 2%;
   margin: 0;
   border-bottom: 2px solid grey;
-  
-  h1 {
-    font-size: 72px;
-    color: lightpink;
-    font-family: 'Amatic SC', cursive;
-    margin: 0.5% 0;
-  }
-  p {
-    font-size: 32px;
-    color: grey;
-    margin-top: 0.2%;
-    margin-bottom: 6%;
-    font-family: 'Amatic SC', cursive;
 
+  .title {
+    h1 {
+      font-size: 72px;
+      color: lightpink;
+      font-family: 'Amatic SC', cursive;
+      margin: 0.5% 0;
+    }
+    p {
+      font-size: 32px;
+      color: grey;
+      margin-top: 0.2%;
+      margin-bottom: 6%;
+      font-family: 'Amatic SC', cursive;
+    }
   }
   .options {
     display: flex;
     justify-content: space-between;
     
-    .option { 
-      text-decoration: none;
-      color: grey;
-      font-size: 1.2rem;
-      font-family: 'Playfair Display', serif;
-      padding: 1%;
+    .nav-links {
+      display: flex;
+      justify-content: space-between;
       
-      &:hover {
-        color: lightpink;
-        border-bottom: 1px dashed grey;
+      .option { 
+        text-decoration: none;
+        color: grey;
+        font-size: 1.2rem;
+        font-family: 'Playfair Display', serif;
+        
+        &:hover {
+          color: lightpink;
+          border-bottom: 2px solid grey;
+        }
       }
     }
-    
-    .cart {
-      display: flex;
+      
+      .cart {
+        display: flex;
       flex-direction: row-reverse;
       
       .cart-link {

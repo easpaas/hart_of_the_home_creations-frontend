@@ -1,23 +1,33 @@
 .home-page {
 
-  .welcome-content {
-    padding: 5%;
+  .welcome-section {
+    display: flex;
+    justify-content: space-between;
 
-    h1 {
-      margin: 0;
-      margin-bottom: 2%;
-      font-size: 3.5rem;
-      font-family: 'Amatic SC', cursive;
+    .colored-div {
+      width: 25%;
+      background-color: pink;
     }
-    p {
-      width: 35%;
-      margin: 0 auto;
-      line-height: 25px;
+
+    .welcome-content {
+      width: 45%;
+      
+      h1 {
+        margin: 0;
+        margin-bottom: 2%;
+        font-size: 3.5rem;
+        font-family: 'Amatic SC', cursive;
+      }
+      p {
+        margin: 0 auto;
+        line-height: 25px;
+      }
     }
   }
-
+    
   .featured-product-wrapper {
     margin-bottom: 2%;
+    background-color:lightgray;
     
     h2 {
       font-family: 'Amatic SC', cursive;
