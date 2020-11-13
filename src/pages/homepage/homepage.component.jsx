@@ -10,7 +10,6 @@ import './homepage.styles.scss';
 const HomePage = () => (
   <div className='home-page'>
     <div className='welcome-section'>
-      <div className='colored-div' />
       <div className='welcome-content'>
         <h1>Welcome</h1>
         <p>
@@ -23,7 +22,6 @@ const HomePage = () => (
           We offer free shipping on any U.S. order over $100.
         </p>
       </div>
-      <div className='colored-div' />
     </div>
     <div className='featured-product-wrapper'>
       <h2>Featured Products</h2>
