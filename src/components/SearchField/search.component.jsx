@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import InputBase from '@material-ui/core/InputBase';
 import { fade, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -53,9 +53,6 @@ const useStyles = makeStyles((theme) => ({
     width: '100%',
     [theme.breakpoints.up('sm')]: {
       width: '12ch',
-      '&:focus': {
-        width: '20ch',
-      },
     },
   }
 }));
@@ -64,6 +61,12 @@ const useStyles = makeStyles((theme) => ({
 // a list of options based on keyword search
 const SearchField = () => {
   const classes = useStyles();
+  const [searchValue, setSearchValue] = useState('');
+
+  const handleChange = (e) => {
+    e.preventDefault();
+    setSearchValue(e.target.value)
+  }
 
   return (
     <div className={classes.search}>
@@ -77,6 +80,8 @@ const SearchField = () => {
           input: classes.inputInput,
         }}
         inputProps={{ 'aria-label': 'search' }}
+        onChange={handleChange}
+        value={searchValue}
       />
     </div>
   )
