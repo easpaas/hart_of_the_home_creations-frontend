@@ -1,26 +1,26 @@
 import React from 'react';
-import { Card, Button } from 'react-bootstrap'
+
+import CustomButton from '../CustomButton/custom-button.component';
 
 import './product-card.styles.scss';
 
-const ProductCard = () => (
-  <div className='product-card'>
-    <Card style={{ width: '18rem' }}>
-      <div className='image-container'>
-        <img src="https://i.ibb.co/87kLCNv/sheep-chair.jpg" alt="sheep chalk print on gray wooden chair" />
+const ProductCard = ({ item, /* addItemToCart from redux */ }) => {
+  const { name, price, imageUrl } = item;
+  return (
+    <div className='product-card'>
+      <div 
+        className='image' 
+        style={{ backgroundImage: `url(${imageUrl})` }} 
+      />
+      <div className='product-footer'>
+        <span className='name'>{name}</span>
+        <span className='price'>{price}</span>
       </div>
-      <Card.Body>
-        <h3>Title</h3>
-        <Card.Text>
-          $ Price
-        </Card.Text>
-        <Card.Text>
-          Short description 
-        </Card.Text>
-        <Button style={{ backgroundColor: 'lightpink', padding: '1.5%'}}>Add To Cart</Button>
-      </Card.Body>
-    </Card>
-  </div>
-);
+      <CustomButton inverted onClick={() => console.log('add to cart')}>
+        ADD TO CART
+      </CustomButton>
+    </div>
+  )
+};
 
 export default ProductCard;
