@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { auth } from '../../utils/auth';
-// import BlogsPreview from '../../components/BlogsPreview/blogs-preview.component';
 
 import SHOP_DATA from './shop.data.js';
 
@@ -30,8 +29,8 @@ const HomePage = () => {
       <div className='featured-product-wrapper'>
         <h2>Featured Products</h2>
         <div className="featured-products">
-          {/* TODO - map and render top four products */}
-          { collections[1].items.map((item, index) => {
+          { 
+            collections[1].items.map((item,index) => {
               return (
                 <ProductCard key={index} item={item} />
               )
@@ -39,7 +38,6 @@ const HomePage = () => {
           }
         </div>
       </div>
-      {/* <BlogsPreview /> */}
     </div>
   )
 };
