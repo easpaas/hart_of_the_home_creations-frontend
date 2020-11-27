@@ -2,33 +2,32 @@
   background-color: lightpink;
   padding-top: 80px;
   padding-bottom: 164px; 
+ 
     
-  .about-content {
-    max-width: 35%;
-    margin: 2% auto;
-    padding: 2%;
-    background-color: black;
-    
-    #profile {
-      width: 100%;
-    }
-    .profile {
-      background-color: lightpink;
-      border: 2px solid;
-      padding: 2%;
-      color: black;
-      margin-top: 2%;
+  .profile-content {
+    display: flex;
+    align-items: center;
+    width: 40vw;
+    margin: 0 auto;
+
+    .profile-text{
 
       h2 {
-        font-variant: small-caps;
+        font-family: 'Amatic SC';
+        margin: 0;
+        margin-bottom: 2%;
+        font-size: 3rem;
+      }
+      p {
+        width: 75%;
+        margin: 0 auto;
+        line-height: 32px;
       }
     }
-    .contact-bar {
-      background-color: black;
-      color: grey;
-      width: 35%;
-      margin: 0% auto;
-      padding: 2%;
+    
+    #profile {
+      border-radius: 50%;
+      width: 50%;
     }
   }
 }
