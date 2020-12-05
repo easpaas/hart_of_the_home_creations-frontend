@@ -4,8 +4,8 @@ import './notfound.styles.scss';
 
 const NotFound = () => (
   <div className='notfound'>
-    This page doesn't exist yet ...
-    <div style={{ fontWeight: '900', margin: '0 auto', fontSize: '1rem', color: 'black', cursor: 'pointer', padding: '2%' }} onClick={() => window.history.back()}>Return to previous page</div>
+    <h1>Blogs Feature...Coming Soon</h1>
+    <button onClick={() => window.history.back()}>Return to previous page</button>
   </div>
 
 );

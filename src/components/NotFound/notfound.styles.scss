@@ -1,10 +1,18 @@
 .notfound {
-  color: red;
-  font-size: 3rem;
-  text-align: center;
-
-  #page-notfound {
-    color: purple;
-    font-size: 2rem;
+  margin-top: 80px;
+  margin-bottom: 80px;
+  
+  h1 {
+    color: lightpink;
+    text-align: center;
   }
+  button {
+    font-weight: 900; 
+    margin: 0 auto; 
+    font-size: 1rem; 
+    color: black; 
+    cursor: pointer; 
+    padding: 2%;
+  }
+
 }
