@@ -19,7 +19,7 @@ const Header = () => (
           <Link className='bar-option' to="/about" >ABOUT US</Link>
         </div>
         <div className='bar-search-field'>     
-          <SearchField />
+          {/* <SearchField /> */}
           <Link to="/cart" className='bar-option'>
             <div className='bar-cart-link'>
               <RiShoppingBagLine />
