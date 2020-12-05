@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import { auth } from '../../utils/auth';
+import React, { useState } from 'react';
 
 import SHOP_DATA from './shop.data.js';
 

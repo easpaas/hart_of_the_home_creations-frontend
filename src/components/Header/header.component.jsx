@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
 
-import { RiShoppingBagLine } from 'react-icons/ri';
-
+import CartIcon from '../CartIcon/cart-icon.component';
+import CartDropdown from '../CartDropdown/cart-dropdown.component';
 import SearchField from '../SearchField/search.component';
+
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+
 import './header.styles.scss';
 
-const Header = () => (
+
+const Header = ({ hidden }) => (
     <div className='header-bar'>
       <Link to="/" className='bar-title'>
           <h1>Hart Of The Home Creations</h1> 
@@ -20,15 +26,15 @@ const Header = () => (
         </div>
         <div className='bar-search-field'>     
           {/* <SearchField /> */}
-          <Link to="/cart" className='bar-option'>
-            <div className='bar-cart-link'>
-              <RiShoppingBagLine />
-              Cart (0) {/* cart count will go here */}
-            </div>
-          </Link>
         </div> 
+        <CartIcon />
       </div> 
+      { hidden ? null : <CartDropdown /> }
     </div> 
 );
 
-export default Header;
+const mapStateToProps = createStructuredSelector({
+  hidden: selectCartHidden
+});
+
+export default connect(mapStateToProps)(Header);

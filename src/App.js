@@ -19,7 +19,7 @@ function App() {
         <Route exact path='/' component={HomePage} />
         <Route path='/about' component={AboutPage} />
         <Route path='/shop' component={ShopPage} />
-        <Route exact path="/cart" component={CheckoutPage} />
+        <Route exact path="/checkout" component={CheckoutPage} />
         <Route path="/*" component={NotFound} />
       </Switch>
       <Footer />
