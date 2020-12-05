@@ -1,10 +1,12 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import CustomButton from '../CustomButton/custom-button.component';
+import { addItemToCart } from '../../redux/cart/cart.actions';
 
 import './product-card.styles.scss';
 
-const ProductCard = ({ item, /* addItemToCart from redux */ }) => {
+const ProductCard = ({ item, addItemToCart }) => {
   const { name, price, imageUrl } = item;
   return (
     <div className='product-card'>
@@ -16,11 +18,15 @@ const ProductCard = ({ item, /* addItemToCart from redux */ }) => {
         <span className='name'>{name}</span>
         <span className='price'>${price}</span>
       </div>
-      <CustomButton inverted onClick={() => console.log('add to cart')}>
+      <CustomButton inverted onClick={() => addItemToCart(item)}>
         ADD TO CART
       </CustomButton>
     </div>
   )
 };
 
-export default ProductCard;
+const mapDispatchToProps = dispatch => ({
+  addItemToCart: item => dispatch(addItemToCart(item))
+});
+
+export default connect(null, mapDispatchToProps)(ProductCard);
