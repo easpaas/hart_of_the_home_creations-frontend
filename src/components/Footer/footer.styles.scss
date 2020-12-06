@@ -1,25 +1,34 @@
 .footer-styles {
   border-top: 2px solid grey;
-  padding-bottom: 2%;
   
-  .footer-nav {
-    padding: 1%;
-    display: flex;
-  }
+  .logo-container {
+    max-width: 100%;
+    margin-top: 16px;
 
-  .social-content {
-    padding-bottom: 1%;
-
-    .contact {
-      width: 10%;
-      margin: 0 auto;
-      
-      p {
-        margin: 0;
-        margin-bottom: 2%;
-        font-size: 24px;
-        font-family: 'Amatic SC', cursive;
-      }
+    .logo {
+      width: 100%;
+      height: 50px;
     }
+  }
+  
+  .contact {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+    margin-top: 16px;
+
+    p {
+      margin: 0;
+      font-size: 24px;
+      font-family: 'Amatic SC', cursive;
+    }
+
+    #social-icons {
+
+    }
+  }
+  #copyright {
+    text-align: left;
+    margin-left: 2%;
   }
 }
