@@ -2,14 +2,14 @@
   display: flex;
   justify-content: space-between;
   padding: 1%;
-  width: 10%;
-  margin: 0 auto;
+  
   .facebook {
     color: blue;
   }
 
   .instagram {
-    background-color: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584,#E1306C, #FD1D1D)
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584,#E1306C, #FD1D1D);
+    border-radius: 10%;
   }
 
   .pinterest {
