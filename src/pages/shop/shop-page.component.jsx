@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 
-import SHOP_DATA from '../HomePage/shop.data.js';
+import SHOP_DATA from '../home/shop.data';
 import ProductCard from '../../components/ProductCard/product-card.component';
 
 import './shop-page.styles.scss';
