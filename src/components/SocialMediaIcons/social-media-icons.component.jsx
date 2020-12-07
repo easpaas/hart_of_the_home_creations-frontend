@@ -12,7 +12,6 @@ import './social-media-icons.styles.scss';
 
 const SocialMediaIcons = () => (
   <div className='social-bar'>
-    <p>Follow Us</p>
     <a className='facebook' href="https://www.facebook.com/chalkcouturewithvickihunter/">
       <FontAwesomeIcon icon={faFacebook} size="1x" />
     </a>
