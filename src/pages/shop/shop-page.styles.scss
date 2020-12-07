@@ -1,20 +1,13 @@
 .shop-page {
+  max-width: 60%;
+  margin: 0 auto; 
   padding-top: 80px;
   padding-bottom: 128px;
-
-  h2 {
-    text-align: left;
-    margin: 0;
-    margin-left: 32px;
-    margin-bottom: 25px;
-    font-size: 3rem;
-    font-family: 'Amatic SC', 'sans serif';;
-  }
 
   .shop-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    width: 100vw;
+    width: 100%;
   }
 }

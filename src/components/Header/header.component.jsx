@@ -5,7 +5,7 @@ import { createStructuredSelector } from 'reselect';
 
 import CartIcon from '../CartIcon/cart-icon.component';
 import CartDropdown from '../CartDropdown/cart-dropdown.component';
-import SearchField from '../SearchField/search.component';
+// import SearchField from '../SearchField/search.component';
 
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
 
