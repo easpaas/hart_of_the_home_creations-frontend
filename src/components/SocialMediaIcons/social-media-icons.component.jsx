@@ -12,14 +12,15 @@ import './social-media-icons.styles.scss';
 
 const SocialMediaIcons = () => (
   <div className='social-bar'>
-    <a className='social-link' href="https://www.facebook.com/chalkcouturewithvickihunter/">
-      <FontAwesomeIcon icon={faFacebook} size="2x" />
+    <p>Follow Us</p>
+    <a className='facebook' href="https://www.facebook.com/chalkcouturewithvickihunter/">
+      <FontAwesomeIcon icon={faFacebook} size="1x" />
     </a>
-    <a className='social-link' href="https://www.instagram.com/iamvickihunter">
-      <FontAwesomeIcon icon={faInstagram} size="2x" />
+    <a className='instagram' href="https://www.instagram.com/iamvickihunter">
+      <FontAwesomeIcon icon={faInstagram} size="1x" />
     </a>
-    <a className='social-link' href="https://www.pinterest.com/vickisscrapper">
-      <FontAwesomeIcon icon={faPinterest} size="2x" />
+    <a className='pinterest' href="https://www.pinterest.com/vickisscrapper">
+      <FontAwesomeIcon icon={faPinterest} size="1x" />
     </a>
   </div>
 );
