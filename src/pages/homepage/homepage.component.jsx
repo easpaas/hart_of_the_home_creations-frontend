@@ -7,7 +7,7 @@ import ProductCard from '../../components/ProductCard/product-card.component';
 import './homepage.styles.scss';
 
 const HomePage = () => {
-  const [collections, setCollections] = useState(SHOP_DATA);
+  const [collections] = useState(SHOP_DATA);
 
   return (
     <div className='home-page'>

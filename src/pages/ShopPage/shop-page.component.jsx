@@ -6,7 +6,7 @@ import ProductCard from '../../components/ProductCard/product-card.component';
 import './shop-page.styles.scss';
 
 const ShopPage = (props) => {
-  const [shopData, setShopData] = useState(SHOP_DATA);
+  const [shopData] = useState(SHOP_DATA);
 
   return(
     <div className='shop-page'>
