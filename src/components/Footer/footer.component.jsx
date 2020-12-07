@@ -13,7 +13,7 @@ const Footer = () => (
     </div>
     <div className="contact">
       <p>Follow Us</p>
-      <SocialMediaIcons id="social-icons" />
+      <SocialMediaIcons />
     </div>
     <p id="copyright">&copy;2020 Hart Of The Home Creations</p>
   </div>
