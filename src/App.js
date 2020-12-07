@@ -4,10 +4,10 @@ import './App.css';
 
 import Header from './components/Header/header.component';
 import Footer from './components/Footer/footer.component';
-import HomePage from './pages/HomePage/homepage.component';
-import AboutPage from './pages/AboutPage/about.component';
-import CheckoutPage from './pages/CheckoutPage/checkout.component';
-import ShopPage from './pages/ShopPage/shop-page.component';
+import HomePage from './pages/home/homepage.component';
+import AboutPage from './pages/about/about.component';
+import CheckoutPage from './pages/checkout/checkout.component';
+import ShopPage from './pages/shop/shop-page.component';
 import NotFound from './components/NotFound/notfound.component';
 
 function App() {
