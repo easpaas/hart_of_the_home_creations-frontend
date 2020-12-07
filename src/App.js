@@ -20,7 +20,7 @@ function App() {
         <Route path='/about' component={AboutPage} />
         <Route path='/shop' component={ShopPage} />
         <Route exact path="/checkout" component={CheckoutPage} />
-        <Route path="/*" component={NotFound} />
+        <Route path="/blog" component={NotFound} />
       </Switch>
       <Footer />
     </div>

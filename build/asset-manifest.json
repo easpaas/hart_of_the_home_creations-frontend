@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.0b27e61f.chunk.css",
+    "main.js": "/static/js/main.b8055cd8.chunk.js",
+    "main.js.map": "/static/js/main.b8055cd8.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.f768aba3.js",
+    "runtime-main.js.map": "/static/js/runtime-main.f768aba3.js.map",
+    "static/js/2.8a93c000.chunk.js": "/static/js/2.8a93c000.chunk.js",
+    "static/js/2.8a93c000.chunk.js.map": "/static/js/2.8a93c000.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.003ed509ddc25655a2818189dae549df.js": "/precache-manifest.003ed509ddc25655a2818189dae549df.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.0b27e61f.chunk.css.map": "/static/css/main.0b27e61f.chunk.css.map",
+    "static/js/2.8a93c000.chunk.js.LICENSE.txt": "/static/js/2.8a93c000.chunk.js.LICENSE.txt",
+    "static/media/HHC-logo.dffe98ba.svg": "/static/media/HHC-logo.dffe98ba.svg",
+    "static/media/contact.png": "/static/media/contact.2a2c247a.png",
+    "static/media/shopping-bag.3d9b7553.svg": "/static/media/shopping-bag.3d9b7553.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f768aba3.js",
+    "static/js/2.8a93c000.chunk.js",
+    "static/css/main.0b27e61f.chunk.css",
+    "static/js/main.b8055cd8.chunk.js"
+  ]
+}
