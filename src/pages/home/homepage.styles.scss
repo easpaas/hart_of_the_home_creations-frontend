@@ -7,17 +7,19 @@
   .welcome-section {
     display: flex;
     justify-content: space-between;
-
+    border-bottom: 2px dashed lightgrey;
+    margin-bottom: 32px;
+    
     .welcome-content {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      margin-bottom: 64px;
+      margin-bottom: 80px;
 
       h1 {
         margin: 0;
         margin-bottom: 25px;
-        font-size: 4.5rem;
+        font-size: 5.5rem;
         font-family: 'Amatic SC', cursive;
       }
       p {
@@ -32,7 +34,6 @@
     h2 {
       font-family: 'Amatic SC', cursive;
       margin: 0;
-      margin-left: 2%;
       margin-bottom: 25px;
       font-size: 2rem;
       text-align: left;

@@ -8,12 +8,12 @@ import './footer.styles.scss';
 
 const Footer = () => (
   <div className="footer-styles">
-    <div className="logo-container">
-      <Logo className="logo" />
-    </div>
     <div className="contact">
       <p>Follow Us</p>
       <SocialMediaIcons />
+    </div>
+    <div className="logo-container">
+      <Logo className="logo" />
     </div>
     <p id="copyright">&copy;2020 Hart Of The Home Creations</p>
   </div>
