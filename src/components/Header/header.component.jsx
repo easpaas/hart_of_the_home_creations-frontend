@@ -6,13 +6,15 @@ import { createStructuredSelector } from 'reselect';
 import CartIcon from '../CartIcon/cart-icon.component';
 import CartDropdown from '../CartDropdown/cart-dropdown.component';
 // import SearchField from '../SearchField/search.component';
-
 import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
+
+import { auth } from '../../firebase/firebase.utils';
 
 import './header.styles.scss';
 
 
-const Header = ({ hidden }) => (
+const Header = ({ hidden, currentUser }) => (
     <div className='header-bar'>
       <Link to="/" className='bar-title'>
           <h1>Hart Of The Home Creations</h1> 
@@ -26,7 +28,20 @@ const Header = ({ hidden }) => (
         </div>
         <div className='bar-search-field'>     
           {/* <SearchField /> */}
-        </div> 
+        </div>
+        {
+          currentUser ? 
+            <div 
+              className='option' 
+              onClick={() => auth.signOut()}
+            >
+              <Link to='/'>SIGN OUT</Link>
+            </div>
+          : 
+            <Link className='option' to='/signin'>
+              SIGN IN
+            </Link>
+        } 
         <CartIcon />
       </div> 
       { hidden ? null : <CartDropdown /> }
@@ -34,6 +49,7 @@ const Header = ({ hidden }) => (
 );
 
 const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
   hidden: selectCartHidden
 });
 
