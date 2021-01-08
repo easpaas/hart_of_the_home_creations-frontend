@@ -10,7 +10,6 @@ const ShopPage = (props) => {
 
   return(
     <div className='shop-page'>
-      <h2>Shop Here</h2>
       <div className='shop-content'>
         {shopData[0].items.map((item, index) => {
             return (

@@ -19,9 +19,6 @@ const HomePage = () => {
             <br />
             <br />
             Our mission is to create an online experience where our guests feel welcome to come in and discover unique and sophisticated items that will inspire their lives.
-            <br />
-            <br />
-            We offer free shipping on any U.S. order over $100.
           </p>
         </div>
       </div>
@@ -30,8 +27,10 @@ const HomePage = () => {
         <div className="featured-products">
           { 
             collections[1].items.map((item,index) => {
+              // isFeatured is a quick add-on 
+              // to adjust css properties for ProductCard
               return (
-                <ProductCard key={index} item={item} />
+                <ProductCard key={index} isFeatured={true} item={item} />
               )
             })
           }

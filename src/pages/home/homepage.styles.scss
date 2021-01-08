@@ -1,24 +1,30 @@
 .home-page {
+  max-width: 60vw;
+  margin: 0 auto;
   padding-top: 80px;
-  padding-bottom: 128px;
+  padding-bottom: 80px;
 
   .welcome-section {
     display: flex;
     justify-content: space-between;
-
+    margin-bottom: 32px;
+    
     .welcome-content {
-      width: 45%;
-      margin: 0 auto;
-      margin-bottom: 64px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 80px;
 
       h1 {
         margin: 0;
         margin-bottom: 25px;
-        font-size: 3.5rem;
+        font-size: 5.5rem;
         font-family: 'Amatic SC', cursive;
       }
       p {
-        margin: 0 auto;
+        width: 60%;
+        line-height: 24px;
+        margin: 0;
       }
     }
   }
@@ -27,7 +33,6 @@
     h2 {
       font-family: 'Amatic SC', cursive;
       margin: 0;
-      margin-left: 2%;
       margin-bottom: 25px;
       font-size: 2rem;
       text-align: left;

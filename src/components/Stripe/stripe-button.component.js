@@ -1,5 +1,7 @@
 import React from 'react';
 
+import  { ReactComponent as Logo } from '../../assets/HHC-logo.svg';
+
 import StripeCheckout from 'react-stripe-checkout';
 
 const StripeCheckoutButton = ({ price }) => {
@@ -9,6 +11,10 @@ const StripeCheckoutButton = ({ price }) => {
   const onToken = token => {
     console.log(token)
     alert('Payment Successful')
+    // TODO 
+    // add toast notification of success
+    // check stripe for toast success notification 
+    // or use Material-UI
   }
 
   return (
@@ -17,7 +23,7 @@ const StripeCheckoutButton = ({ price }) => {
       name="Hart Of The Home Creations" 
       billingAddress 
       shippingAddress
-      image="https://svgshare.com/i/CUz.svg"
+      image='../../assets/HHC-logo.svg'
       description={`Your Total is: ${price}`}
       amount={priceForStripe}
       panelLabel="Pay Now"
