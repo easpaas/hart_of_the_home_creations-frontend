@@ -20,7 +20,7 @@ function SignIn (props) {
       await auth.signInWithEmailAndPassword(email, password);
       setFormData({ email: '', password: '' })
     } catch (error) {
-      console.log(error)
+      window.alert(error)
     }
   };
 
