@@ -13,13 +13,13 @@ import './social-media-icons.styles.scss';
 const SocialMediaIcons = () => (
   <div className='social-bar'>
     <a className='facebook' href="https://www.facebook.com/chalkcouturewithvickihunter/">
-      <FontAwesomeIcon icon={faFacebook} size="1x" />
+      <FontAwesomeIcon icon={faFacebook} size="2x" />
     </a>
     <a className='instagram' href="https://www.instagram.com/iamvickihunter">
-      <FontAwesomeIcon icon={faInstagram} size="1x" />
+      <FontAwesomeIcon icon={faInstagram} size="2x" />
     </a>
     <a className='pinterest' href="https://www.pinterest.com/vickisscrapper">
-      <FontAwesomeIcon icon={faPinterest} size="1x" />
+      <FontAwesomeIcon icon={faPinterest} size="2x" />
     </a>
   </div>
 );

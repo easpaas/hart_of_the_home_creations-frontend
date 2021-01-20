@@ -1,16 +1,15 @@
 .social-bar {
+  grid-column: 3;
   display: flex;
-  justify-content: space-between;
-  padding: 1%;
-  
+  justify-content: space-evenly;
+
   .facebook {
     color: blue;
-  }
-
+  } 
   .instagram {
-    color: #FD1D1D;
+    color: white;
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%);
   }
-
   .pinterest {
     color: red;
   }
