@@ -4,5 +4,11 @@
 
 a {
   text-decoration: none;
-  color: grey;
+}
+
+p {
+  font-family: 'Helvetica Nueue';
+  font-weight: 500;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
 }
