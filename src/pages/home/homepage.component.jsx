@@ -1,14 +1,8 @@
-import React, { useState } from 'react';
-
-import SHOP_DATA from './shop.data.js';
-
-import ProductCard from '../../components/ProductCard/product-card.component';
+import React from 'react';
 
 import './homepage.styles.scss';
 
 const HomePage = () => {
-  const [collections] = useState(SHOP_DATA);
-
   return (
     <div className='home-page'>
       <div className='welcome-content'>
@@ -19,20 +13,6 @@ const HomePage = () => {
           <br />
           Our mission is to create an online experience where our guests feel welcome to come in and discover unique and sophisticated items that will inspire their lives.
         </p>
-      </div>
-      <div className='featured-product-wrapper'>
-        <h2>Featured Products</h2>
-        <div className="featured-products">
-          { 
-            collections[1].items.map((item,index) => {
-              // isFeatured is a quick add-on 
-              // to adjust css properties for ProductCard
-              return (
-                <ProductCard key={index} isFeatured={true} item={item} />
-              )
-            })
-          }
-        </div>
       </div>
     </div>
   )
