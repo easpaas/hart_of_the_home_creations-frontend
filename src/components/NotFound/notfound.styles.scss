@@ -1,18 +1,21 @@
 .notfound {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
   
   h1 {
     color: lightpink;
     text-align: center;
   }
   button {
-    font-weight: 900; 
-    margin: 0 auto; 
-    font-size: 1rem; 
     color: black; 
-    cursor: pointer; 
+    font-weight: 900; 
+    font-size: 1rem; 
+    margin: 2% auto; 
     padding: 2%;
+    
+    cursor: pointer; 
   }
 
 }
