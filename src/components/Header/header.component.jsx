@@ -20,7 +20,7 @@ const Header = ({ hidden, currentUser }) => (
         <h1>Hart Of The Home Creations</h1> 
         <p>Inspired by life. Powered by love.</p>
     </Link>
-
+{/* 
     <div className='nav-links'>    
       <Link className='option' to="/shop">SHOP</Link>
       <Link className='option' to="/blog">BLOG</Link>
@@ -41,8 +41,8 @@ const Header = ({ hidden, currentUser }) => (
             SIGN IN
           </Link>
       }
-      <CartIcon />
-    </div> 
+      <CartIcon /> */}
+    {/* </div>  */}
     { hidden ? null : <CartDropdown /> }
   </div> 
 );
